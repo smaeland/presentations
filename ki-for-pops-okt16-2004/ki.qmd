@@ -1,0 +1,72 @@
+---
+title: "KI for POPS"
+author: "Steffen Mæland (IDER)"
+format: revealjs
+---
+
+## {background-color="#fdf4f5" .center data-menu-title="Definisjon"}
+
+![](figures/nynorskordboka.png)
+
+## {background-color="#dceaf7" data-menu-title="KI vs ML"}
+
+::: {.r-stack}
+::: {style="background: #163e64; width: 950px; height: 950px; border-radius: 500px;"}
+:::
+::: {style="background: #215f9a; width: 650px; height: 650px; border-radius: 500px;"}
+:::
+::: {style="background: #46b1e1; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+::: {style="background: #ccffff; width: 120px; height: 120px; border-radius: 200px;"}
+:::
+:::
+
+:::{.absolute top="0%" right="0%" style="color: #163e64; font-size: 1.2em;"}
+Kunstig <br>intelligens
+:::
+:::{.absolute top="30%" left="40%" style="color: #fff;"}
+Maskinlæring
+:::
+:::{.absolute top="50%" left="43%" style="color: #fff; font-size: 0.8em;"}
+Dyp læring
+:::
+:::{.absolute top="62%" left="45%" style="color: #163e64; font-size: 0.7em; text-align: center;"}
+Språk-<br>modeller
+:::
+
+
+## {.center background-color="#E1F5FE" data-menu-title="ChatGPT"}
+
+<img src="figures/chatgpt.png" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+
+## {GPT-UiO}
+
+
+## _Sora_ (2024) {background-color="#000" background-iframe="https://player.vimeo.com/video/913132493?h=efc0bcf645"}
+
+:::{.absolute bottom="0%" right="0%" style="color: #fff; font-size: 0.6em;"}
+_Prompt_: The camera follows behind a white vintage SUV<br>
+with a black roof rack as it speeds up a steep dirt road<br>
+surrounded by pine trees on a steep mountain slope, (...) 
+:::
+
+
+
+## {background-iframe="https://leonardo.ai/" background-interactive="true"}
+
+## {background-image="figures/panopto-whisper.png" background-position="top"}
+
+## {data-menu-title="AI index"}
+
+![[Maslej et al. (2024) Artificial intelligence index report 2024. arXiv:2405.19522]{style="font-size: 0.6em;"}](figures/ai-index-fig_2.1.16.jpg){width="80%"}
+
+:::{.absolute bottom="0%" right="0%"}
+![](figures/ai-index-logo.png)
+:::
+
+## {background-iframe="https://openai.com/index/learning-to-reason-with-llms/" background-interactive="true"}
+
+##
+https://www.scientificamerican.com/article/chatbots-have-thoroughly-infiltrated-scientific-publishing/
+https://www.sciencedirect.com/science/article/pii/S2468023024002402
+https://retractionwatch.com/papers-and-peer-reviews-with-evidence-of-chatgpt-writing/
