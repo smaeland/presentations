@@ -1,0 +1,283 @@
+---
+title: "KI for forskning"
+subtitle: "Pasientopplevelser og pasientsikkerhet ved akutt og kritisk sykdom"
+author: "Steffen Mæland (IDER) / 16. okt 2024"
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    auto-stretch: false
+    slide-number: true
+    auto-play-media: true
+    title-slide-attributes: 
+      data-background-image: figures/hvl_logo_engelsk.png
+      data-background-size: 15%
+      data-background-position: 98% 2%
+---
+
+## {background-color="#fdf4f5" data-menu-title="Definisjon"}
+
+:::{.absolute top="25%" left="25%"}
+![](figures/nynorskordboka.png){width="70%"}
+:::
+
+## {background-color="#dceaf7" data-menu-title="KI vs ML"}
+
+::: {.r-stack}
+::: {style="background: #163e64; width: 950px; height: 950px; border-radius: 500px;"}
+:::
+::: {style="background: #215f9a; width: 650px; height: 650px; border-radius: 500px;"}
+:::
+::: {style="background: #46b1e1; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+::: {style="background: #ccffff; width: 120px; height: 120px; border-radius: 200px;"}
+:::
+:::
+
+:::{.absolute top="0%" right="0%" style="color: #163e64; font-size: 1.2em;"}
+Kunstig <br>intelligens
+:::
+:::{.absolute top="30%" left="40%" style="color: #fff;"}
+Maskinlæring
+:::
+:::{.absolute top="50%" left="43%" style="color: #fff; font-size: 0.8em;"}
+Dyp læring
+:::
+:::{.absolute top="64.5%" left="44.5%" style="color: #163e64; font-size: 0.7em; text-align: center;"}
+Generativ<br>AI
+:::
+
+
+## {.center background-color="#E1F5FE" data-menu-title="ChatGPT"}
+
+<img src="figures/chatgpt.png" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+
+## {background-image="figures/gpt-uio.png" background-size="contain" background-repeat="no-repeat"}
+
+
+## _Sora_ (2024) {background-color="#000" background-iframe="https://player.vimeo.com/video/913132493?h=efc0bcf645"}
+
+:::{.absolute bottom="0%" right="0%" style="color: #fff; font-size: 0.6em;"}
+_Prompt_: The camera follows behind a white vintage SUV<br>
+with a black roof rack as it speeds up a steep dirt road<br>
+surrounded by pine trees on a steep mountain slope, (...) 
+:::
+
+## {background-iframe="https://leonardo.ai/" background-interactive="true"data-menu-title="Imagen"}
+
+## {background-image="figures/panopto-whisper.png" background-position="top" data-menu-title="Whisper"}
+
+## {data-menu-title="AI index"}
+
+![[Maslej et al. (2024) Artificial intelligence index report 2024. arXiv:2405.19522]{style="font-size: 0.6em;"}](figures/ai-index-fig_2.1.16.jpg){width="80%"}
+
+:::{.absolute bottom="0%" right="0%"}
+![](figures/ai-index-logo.png)
+:::
+
+## {background-iframe="https://openai.com/index/learning-to-reason-with-llms/" background-interactive="true" data-menu-title="GPT o1"}
+
+## {background-color="#dceaf7" data-menu-title="ML & DL"}
+
+:::{.absolute left="40%"}
+::: {.r-stack}
+::: {style="background: #163e64; width: 950px; height: 950px; border-radius: 500px;"}
+:::
+::: {style="background: #215f9a; width: 650px; height: 650px; border-radius: 500px;"}
+:::
+::: {style="background: #46b1e1; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+::: {style="background: #ccffff; width: 120px; height: 120px; border-radius: 200px;"}
+:::
+:::
+
+:::{.absolute top="20%" left="38%" style="color: #fff;"}
+Maskinlæring
+:::
+:::{.absolute top="35%" left="43%" style="color: #fff; font-size: 0.8em;"}
+Dyp læring
+:::
+:::
+
+:::{.absolute left="3%" top="0%"}
+<img src="figures/book1.webp" width="200px" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+:::{.absolute left="20%" top="5%"}
+<img src="figures/book2.jpg" width="200px" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+:::{.absolute left="5%" top="22%"}
+<img src="figures/book4.webp" width="200px" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+:::{.absolute left="0%" top="32%"}
+<img src="figures/book3.webp" width="200px" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+:::{.absolute left="15%" top="35%"}
+<img src="figures/book5.webp" width="200px" style="box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+
+## {background-color="#dceaf7" data-menu-title="GenAI"}
+
+:::{.absolute left="40%"}
+::: {.r-stack}
+::: {style="background: #455A64; width: 950px; height: 950px; border-radius: 500px;"}
+:::
+::: {style="background: #607D8B; width: 650px; height: 650px; border-radius: 500px;"}
+:::
+::: {style="background: #90A4AE; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+::: {style="background: #ccffff; width: 120px; height: 120px; border-radius: 200px;"}
+:::
+:::
+
+:::{.absolute top="46.5%" left="44%" style="color: #163e64; font-size: 0.6em; text-align: center;"}
+Generativ<br>AI
+:::
+:::
+
+## Generativ AI for helse {.center background-color="#decaf0"}
+
+## {background-iframe="https://www.nrk.no/sorlandet/legesenter-ber-pasientane-bruke-ki-1.16891192" data-menu-title="ChatGPT, M.D."}
+
+## Chatbots aka _virtual health assistants_
+
+:::{style="padding-top: 40px;"}
+:::
+
+:::{style="font-size: 0.8em; font-style: italic;"}
+
+::::{.columns}
+:::{.column width="40%"}
+
+- Symptom-screening
+- Monitorering & selvrapportering
+- Emosjonell støtte 
+- Livsstils-coaching
+  - Diett
+  - Røykeslutt 
+
+:::
+
+:::{.column width="30%"}
+![](figures/buoy1.webp)
+:::
+:::{.column width="30%"}
+![](figures/buoy2.webp)
+:::
+
+::::
+:::
+
+:::{.absolute bottom="0%" left="0%" style="font-size: 0.25em;"}
+Maher, Carol et al. _Virtual health assistants: a grand challenge in health communications and behavior change._
+Frontiers in digital health vol. 6 1418695. 17 May. 2024, doi:10.3389/fdgth.2024.1418695
+:::
+
+
+## Clinical decision support
+
+:::{style="padding-top: 50px;"}
+:::
+
+::::{.columns}
+
+:::{.column width="40%"}
+Chatbots men _for leger_ <br>
+(eller annet medisinsk personell)
+:::
+:::{.column width="20%"}
+:::
+:::{.column width="40%"}
+{{< video https://regard.com/wp-content/uploads/2023/11/regard-demo.mp4 width="400px" >}}
+:::
+
+::::
+
+:::{.absolute bottom="0%" left="0%" style="font-size: 0.25em;"}
+Zhang P, Kamel Boulos MN. _Generative AI in Medicine and Healthcare: Promises, Opportunities and Challenges_. Future Internet. 2023; 15(9):286. https://doi.org/10.3390/fi15090286 
+:::
+
+
+## Utvikling av legemidler {background-color="#ECEFF1"}
+
+:::{.absolute top="20%" left="20%"}
+
+![](figures/ai-drugs.jpg){width="60%"}
+
+:::
+
+:::{.absolute bottom="0%" left="0%" style="font-size: 0.3em;"}
+Zeng, Xiangxiang, et al. _Deep generative molecular design reshapes drug discovery._ Cell Reports Medicine 3.12 (2022).
+:::
+
+## Generativ AI for forskning {.center background-color="#decaf0"}
+
+## {background-iframe="https://elicit.com/" background-interactive="true" data-menu-title="Elicit"}
+
+## {background-iframe="https://www.researchrabbit.ai/" background-interactive="true" data-menu-title="Research rabbit"}
+
+## {background-image="figures/semanticscholar.png" background-position="top" data-menu-title="Semantic scholar"}
+
+## {background-image="figures/nature-chatgpt-1.png" background-position="top" data-menu-title="Nature rules"}
+
+:::{.absolute top="45%" left="25%"}
+<!-- ![](figures/nature-chatgpt-2.png) -->
+<img src="figures/nature-chatgpt-2.png" width="800px" style="border: 2px solid; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+
+
+
+## {background-iframe="https://www.sciencedirect.com/science/article/pii/S2468023024002402" background-interactive="true" data-menu-title="Certainly, here is an introduction"}
+
+## {background-iframe="https://pubpeer.com/publications/7C052DB681C604E7C4E3BAEEEFB4B5" background-interactive="true" data-menu-title="Certainly 2"}
+
+:::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
+Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
+:::
+
+## {background-iframe="https://pubpeer.com/publications/2C3A675054700F4010667A5F4D3C55" background-interactive="true" data-menu-title="Regenerate response"}
+
+:::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
+Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
+:::
+
+## {background-iframe="https://pubpeer.com/publications/3D6A2E047FF90AC216C993BE5EB7A4" background-interactive="true" data-menu-title="Predict the future"}
+
+:::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
+Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
+:::
+
+## {.center data-menu-title="Populære ord"}
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/ai-adjectives.png){height="650px"}
+:::
+:::{.column width="50%"}
+![](figures/ai-adverbs.png){height="650px"}
+:::
+::::
+
+:::{.absolute bottom="0%" left="0%" style="font-size: 0.3em;"}
+_AI Chatbots Have Thoroughly Infiltrated Scientific Publishing_ (2024) Scientific American
+:::
+
+
+## {background-image="figures/attention.png" background-position="top" data-menu-title="Attention is all you need"}
+
+:::{.absolute top="15%" left="40%"}
+<img src="figures/attention-flowchart.png" width="350px" style="border: 1px solid; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
+:::
+
+
+
+
+<!-- https://www.scientificamerican.com/article/chatbots-have-thoroughly-infiltrated-scientific-publishing/ -->
+<!-- https://www.sciencedirect.com/science/article/pii/S2468023024002402 -->
+<!-- https://retractionwatch.com/papers-and-peer-reviews-with-evidence-of-chatgpt-writing/ -->
+
+
+## {background-color="#fff" data-menu-title="Fin"}
+
+:::{.absolute top="60%" left="40%" width="20%"}
+![](figures/hvl_logo_engelsk.png)
+:::
+

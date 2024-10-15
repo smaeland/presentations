@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif: "Noto Sans Display", sans-serif !default;
+$presentation-heading-font: "Noto Sans Display", sans-serif !default;
+
+
+
+/*-- scss:rules --*/
+
+// Title slide
+#title-slide {
+
+  .title {
+    background: -webkit-linear-gradient(left, #009688, #2196F3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.1em;
+   }
+
+  .subtitle {
+    margin-top: 1em;
+    font-weight: 400;
+  }
+
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
+
+    .quarto-title-author {
+      margin-top: 2em;
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+      font-weight: 300;
+    }
+  }
+ 
+}
+
