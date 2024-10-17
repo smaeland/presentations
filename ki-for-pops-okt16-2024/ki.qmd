@@ -62,7 +62,7 @@ with a black roof rack as it speeds up a steep dirt road<br>
 surrounded by pine trees on a steep mountain slope, (...) 
 :::
 
-## {background-iframe="https://leonardo.ai/" background-interactive="true"data-menu-title="Imagen"}
+## {background-iframe="https://leonardo.ai/" data-menu-title="Imagen"}
 
 ## {background-image="figures/panopto-whisper.png" background-position="top" data-menu-title="Whisper"}
 
@@ -74,7 +74,7 @@ surrounded by pine trees on a steep mountain slope, (...)
 ![](figures/ai-index-logo.png)
 :::
 
-## {background-iframe="https://openai.com/index/learning-to-reason-with-llms/" background-interactive="true" data-menu-title="GPT o1"}
+## {background-iframe="https://openai.com/index/learning-to-reason-with-llms/" data-menu-title="GPT o1"}
 
 ## {background-color="#dceaf7" data-menu-title="ML & DL"}
 
@@ -210,9 +210,9 @@ Zeng, Xiangxiang, et al. _Deep generative molecular design reshapes drug discove
 
 ## Generativ AI for forskning {.center background-color="#decaf0"}
 
-## {background-iframe="https://elicit.com/" background-interactive="true" data-menu-title="Elicit"}
+## {background-iframe="https://elicit.com/" data-menu-title="Elicit"}
 
-## {background-iframe="https://www.researchrabbit.ai/" background-interactive="true" data-menu-title="Research rabbit"}
+## {background-iframe="https://www.researchrabbit.ai/" data-menu-title="Research rabbit"}
 
 ## {background-image="figures/semanticscholar.png" background-position="top" data-menu-title="Semantic scholar"}
 
@@ -225,21 +225,21 @@ Zeng, Xiangxiang, et al. _Deep generative molecular design reshapes drug discove
 
 
 
-## {background-iframe="https://www.sciencedirect.com/science/article/pii/S2468023024002402" background-interactive="true" data-menu-title="Certainly, here is an introduction"}
+## {background-iframe="https://www.sciencedirect.com/science/article/pii/S2468023024002402" data-menu-title="Certainly, here is an introduction"}
 
-## {background-iframe="https://pubpeer.com/publications/7C052DB681C604E7C4E3BAEEEFB4B5" background-interactive="true" data-menu-title="Certainly 2"}
-
-:::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
-Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
-:::
-
-## {background-iframe="https://pubpeer.com/publications/2C3A675054700F4010667A5F4D3C55" background-interactive="true" data-menu-title="Regenerate response"}
+## {background-iframe="https://pubpeer.com/publications/7C052DB681C604E7C4E3BAEEEFB4B5" data-menu-title="Certainly 2"}
 
 :::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
 Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
 :::
 
-## {background-iframe="https://pubpeer.com/publications/3D6A2E047FF90AC216C993BE5EB7A4" background-interactive="true" data-menu-title="Predict the future"}
+## {background-iframe="https://pubpeer.com/publications/2C3A675054700F4010667A5F4D3C55" data-menu-title="Regenerate response"}
+
+:::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
+Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
+:::
+
+## {background-iframe="https://pubpeer.com/publications/3D6A2E047FF90AC216C993BE5EB7A4" data-menu-title="Predict the future"}
 
 :::{.absolute top="70%" right="0%" style="font-size: 0.3em;"}
 Izquierdo-Condoy, et al. _“AI et al.” The perils<br>of overreliance on Artificial Intelligence by authors<br>in scientific research._ Clinical eHealth (2024).
@@ -266,8 +266,6 @@ _AI Chatbots Have Thoroughly Infiltrated Scientific Publishing_ (2024) Scientifi
 :::{.absolute top="15%" left="40%"}
 <img src="figures/attention-flowchart.png" width="350px" style="border: 1px solid; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);">
 :::
-
-
 
 
 <!-- https://www.scientificamerican.com/article/chatbots-have-thoroughly-infiltrated-scientific-publishing/ -->
