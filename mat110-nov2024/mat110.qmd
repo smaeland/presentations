@@ -1,0 +1,45 @@
+---
+title: "Mattekveld MAT110"
+subtitle: "KI stuff"
+author: "Steffen Mæland (IDER)"
+format:
+  revealjs:
+    # theme: [default, custom.scss]
+    auto-stretch: false
+    auto-play-media: true
+---
+
+## Kul forside {.center}
+
+## ChatGPT demo
+
+## 
+
+
+
+## Flow
+
+- gpt demo
+- word-for-word. how to compute the next one
+- show script for next word probabilities
+- transition: how to compute next value. start with an easier problem.
+- linear regression (with a colored dot/line)
+  - vector / matrix notation
+- derivatives 
+  - mountain + fog
+  - partial derivatives
+- fitness landscape v/ arrows
+- transition: okay so we can model the future. how to do this for words?
+- no words on a computer (maybe show binary). tokenisation
+- words have meaning - how to implement this. word2vec
+- vectors and vector spaces
+
+
+## MAT110
+
+- Parametertilpasning polynom
+  - Derivasjon
+  - Fitness landscape
+
+- Vektorrom 
+  - word2vec 
