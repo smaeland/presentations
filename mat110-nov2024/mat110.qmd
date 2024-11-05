@@ -14,6 +14,8 @@ format:
 
 ## ChatGPT demo
 
+## GPT-2 {background-iframe="https://openai.com/index/gpt-2-1-5b-release/"}
+
 ## Terminal window
 
 ## An easier prediction problem
@@ -56,7 +58,7 @@ $$
 (fig of some 1D curve with stationary points)
 
 
-## Foggy mountain
+## Foggy mountain {background-image="figures/mountain.jpg"}
 
 ## Partial derivatives
 
@@ -71,13 +73,239 @@ $$
 
 :::{.column width="50%"}
 $$
-\frac{\nabla}{\nabla x} , \quad \frac{\nabla}{\nabla y}
+\frac{\partial}{\partial x} , \quad \frac{\partial}{\partial y}
 $$
 
 ![](figures/3d_plot_example.png){fig-align="center"}
 :::
 ::::
- 
+
+## Gradient
+
+$$
+\nabla L = 
+\begin{bmatrix}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{bmatrix}
+$$
+
+vector of functions
+
+## Bokeh plot with gradient
+
+## Gradient descent 
+
+## Transition
+
+can model the future, how about words
+
+## No words on a computer 
+
+```
+Matematikk er kult :)
+```
+
+```
+01001101 01100001 01110100 01100101 01101101 01100001
+01110100 01101001 01101011 01101011 00100000 01100101
+01110010 00100000 01101011 01110101 01101100 01110100
+00100000 00111010 00101001
+```
+
+## Tokenization
+
+> Mathematics is cool because it
+
+```
+Mat          ->   19044
+hemat        ->   10024
+ics          ->     873
+ is          ->     318
+ cool        ->    3608
+ because     ->     780
+ it          ->     340
+```
+
+> 19044 10024 873 318 3608 780 340
+
+## Data {background-iframe="https://commoncrawl.org/"}
+
+## NN
+
+![](figures/neuralnet.png)
+
+## NN
+
+![](figures/neuralnet_activations.png)
+
+## Kjerneregelen {.center}
+
+## 
+
+La oss skrive et nevralnett som en funksjon sammensatt av hvert lag $K$, 
+
+$$
+\hat{y} = f_K(f_{K-1}(f_{K-2}(\dots (f_1(\boldsymbol(x), \boldsymbol{\theta_1}) \dots ))))
+$$
+
+Hvordan finne parameterene $\boldsymbol{\theta}$ som gir minst mulig feil $L$?
+
+## Kjerneregelen
+
+$$
+\frac{\partial L}{\partial\boldsymbol{\theta}_{K-1}} 
+= \frac{\partial L}{\partial\boldsymbol{f}_{K}}
+\frac{\partial \boldsymbol{f}_K}{\partial\boldsymbol{\theta}_{K-1}}
+$$
+
+$$
+\frac{\partial L}{\partial\boldsymbol{\theta}_{K-2}} 
+= \frac{\partial L}{\partial\boldsymbol{f}_{K}}
+\frac{\partial \boldsymbol{f}_K}{\partial\boldsymbol{f}_{K-1}}
+\frac{\partial \boldsymbol{f}_{K-1}}{\partial\boldsymbol{\theta}_{K-2}}
+$$
+
+$$
+\frac{\partial L}{\partial\boldsymbol{\theta}_{K-3}} 
+= \frac{\partial L}{\partial\boldsymbol{f}_{K}}
+\frac{\partial \boldsymbol{f}_K}{\partial\boldsymbol{f}_{K-1}}
+\frac{\partial \boldsymbol{f}_{K-1}}{\partial\boldsymbol{f}_{K-2}}
+\frac{\partial \boldsymbol{f}_{K-2}}{\partial\boldsymbol{\theta}_{K-3}}
+$$
+
+$$
+\frac{\partial L}{\partial\boldsymbol{\theta}_{i}} 
+= \frac{\partial L}{\partial\boldsymbol{f}_{K}}
+\frac{\partial \boldsymbol{f}_{K-1}}{\partial\boldsymbol{f}_{K-2}}
+\dots
+\frac{\partial \boldsymbol{f}_{i+2}}{\partial\boldsymbol{f}_{i+1}}
+\frac{\partial \boldsymbol{f}_{i+1}}{\partial\boldsymbol{\theta}_{i}}
+$$
+
+## ChatGPT parameter count {background-image="figures/gpt-parameters.png"}
+
+:::{.r-stack}
+
+![](figures/datacentre.jpg)
+
+:::
+
+## {background-iframe="https://en.wikipedia.org/wiki/Automatic_differentiation"}
+
+
+## Vektorer i 1D
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-1d.png)
+:::
+
+:::{.column width="50%"}
+$$
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2}
+$$
+
+## Vektorer i 2D
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-2d.png)
+:::
+
+:::{.column width="50%"}
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2}
+$$
+
+
+## Vektorer i 2D
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-3d.png)
+:::
+
+:::{.column width="50%"}
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2 \\ a_3
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2 \\ b_3
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + (a_3-b_3)^2}
+$$
+
+## Vektorer i ND
+
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-nd.png)
+:::
+
+:::{.column width="50%"}
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2 \\ \vdots \\ a_N 
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2 \\ \vdots \\ b_N
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + \dots +  (a_N-b_N)^2}
+$$
+
 
 ## Flow
 
@@ -91,6 +319,9 @@ $$
   - mountain + fog
   - partial derivatives
 - fitness landscape v/ arrows
+- neural networks
+  - chain rule
+  - for big models? -> autodiff
 - transition: okay so we can model the future. how to do this for words?
 - no words on a computer (maybe show binary). tokenisation
 - words have meaning - how to implement this. word2vec
