@@ -7,15 +7,77 @@ format:
     # theme: [default, custom.scss]
     auto-stretch: false
     auto-play-media: true
+  
 ---
 
 ## Kul forside {.center}
 
 ## ChatGPT demo
 
-## 
+## Terminal window
+
+## An easier prediction problem
+
+Just list data points -> graph would be better
+(but introduce x, y)
+
+## An easier prediction problem
+
+Data points
+
+## An easier prediction problem
+
+Data points with predictive model
+
+## Define loss function
+
+![](figures/lossfunction/image-1.png)
 
 
+## An easier prediction model
+
+Predictive model with loss (html fig)
+
+$$
+L = (y - \hat{y})^2
+$$
+
+$$
+L = \frac{1}{N} \sum_i^N (y_i - \hat{y}_i)^2
+$$
+
+
+## Loss derivative
+
+$$
+L = (\boldsymbol{\theta}^T \boldsymbol{x} - \boldsymbol)^2
+$$
+
+(fig of some 1D curve with stationary points)
+
+
+## Foggy mountain
+
+## Partial derivatives
+
+::::{.columns}
+:::{.column width="50%"}
+$$
+\frac{d}{dx}
+$$
+
+![](figures/2d_plot_example.png){fig-align="center"}
+:::
+
+:::{.column width="50%"}
+$$
+\frac{\nabla}{\nabla x} , \quad \frac{\nabla}{\nabla y}
+$$
+
+![](figures/3d_plot_example.png){fig-align="center"}
+:::
+::::
+ 
 
 ## Flow
 

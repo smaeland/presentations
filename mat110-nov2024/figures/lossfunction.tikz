@@ -1,0 +1,34 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usetikzlibrary{patterns,decorations.pathmorphing,arrows.meta}
+
+\begin{document}
+\sffamily
+
+\definecolor{purple}{HTML}{009688}
+
+\begin{tikzpicture}[domain=-2.4:2.4]
+  \node at (-3,3) {};
+  \node at (-3,-1.7) {};
+  \node[right] at (0.15,2.75) {$L$};
+  \draw[-latex, very thick] (-2.8,0) -- (2.8,0) node[right, align=center] {$y-\hat{y}$};
+  \draw[latex-, very thick] (0,3.0) -- (0,-0.1) node[below] {0.0};
+  %
+  \draw[color=purple, very thick] plot (\x, 0.5*\x*\x);
+  \draw[stealth-] (0.00, -0.75) -- (0.0, -1.15) node[below, align=center] {\textcolor[HTML]{00C853}{best}};
+  \draw[stealth-] (0.75, 0.0) -- (0.75, -0.25) node[below, align=center] {\textcolor[HTML]{FFC107}{ok}};
+  \draw[stealth-] (1.50, 0.0) -- (1.50, -0.5) node[below, align=center] {\textcolor[HTML]{F44336}{dårlig}};
+  \draw[stealth-] (2.25, 0.0) -- (2.25, -1.0) node[below, align=center] {\textcolor[HTML]{C62828}{sykt dårlig}};
+  %
+  \draw[stealth-] (-0.75, 0.0) -- (-0.75, -0.25) node[below, align=center] {\textcolor[HTML]{FFC107}{ok}};
+  \draw[stealth-] (-1.50, 0.0) -- (-1.50, -0.5) node[below, align=center] {\textcolor[HTML]{F44336}{dårlig}};
+  \draw[stealth-] (-2.25, 0.0) -- (-2.25, -1.0) node[below, align=center] {\textcolor[HTML]{C62828}{sykt dårlig}};
+  %\fill[white] (-0.1, 0.1) rectangle (0.1, 3.0);
+\end{tikzpicture}
+
+
+
+\end{document}
+
