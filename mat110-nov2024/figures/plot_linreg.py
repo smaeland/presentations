@@ -204,7 +204,8 @@ def plot_model_loss():
     w0.js_on_change('value', callback)
     w1.js_on_change('value', callback)
 
-    sliders = row(Spacer(width=50), w0, w1, height=50, sizing_mode='stretch_width')
+    sliders = row(Spacer(width=100), w0, w1, height=80, sizing_mode='stretch_width')
+    # sliders = row(Spacer(width=50), w0, w1, height=50, sizing_mode='stretch_width')
     grid = column([plot, sliders], sizing_mode='stretch_both')
 
     if DEBUG:
@@ -243,7 +244,7 @@ def plot_gradient():
     plot1.xaxis.axis_label_text_font_size = "32pt"
     plot1.yaxis.axis_label_text_font_size = "32pt"
     
-    label = Label(x=0.85, y=2, text=r'$$L = $$', text_font_size='42px')
+    label = Label(x=0.6, y=2, text=r'$$L = $$', text_font_size='42px')
     plot1.add_layout(label)
 
     plot2 = figure(
@@ -257,8 +258,8 @@ def plot_gradient():
     plot2.xaxis.axis_label_text_font_size = "32pt"
     plot2.yaxis.axis_label_text_font_size = "32pt"
 
-    label1 = Label(x=6, y=-5, text=r'$$-\frac{\partial L}{\partial\theta_0} = $$', text_font_size='36px')
-    label2 = Label(x=6, y=-8, text=r'$$-\frac{\partial L}{\partial\theta_1} = $$', text_font_size='36px')
+    label1 = Label(x=5, y=-6, text=r'$$-\frac{\partial L}{\partial\theta_0} = $$', text_font_size='36px')
+    label2 = Label(x=5, y=-9, text=r'$$-\frac{\partial L}{\partial\theta_1} = $$', text_font_size='36px')
     plot2.add_layout(label1)
     plot2.add_layout(label2)
 
@@ -321,7 +322,8 @@ def plot_gradient():
     w1.js_on_change('value', callback)
 
     plots = row([plot1, plot2], sizing_mode='stretch_both')
-    sliders = row(Spacer(width=50), w0, w1, height=50, sizing_mode='stretch_width')
+    sliders = row(Spacer(width=100), w0, w1, height=80, sizing_mode='stretch_width')
+    # sliders = row(Spacer(width=50), w0, w1, height=50, sizing_mode='stretch_width')
     grid = column([plots, sliders], sizing_mode='stretch_both')
 
     if DEBUG:
