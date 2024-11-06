@@ -5,7 +5,8 @@ from bokeh.plotting import figure, show, output_file, save
 
 #import matplotlib.pyplot as plt
 
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
 marker_size = 16
 line_width = 5
@@ -22,6 +23,12 @@ def generate_data(offset=4.0, slope=2.0, num=100, seed=42):
 
 X_train, y_train = generate_data(num=20)
 
+if DEBUG:
+    print('| | |')
+    print('|---|---|')
+    for _x, _y in zip(X_train, y_train):
+        print('|', np.round(_x, 3), '|', np.round(_y, 3), '|')
+
 
 def plot_data_only():
 
@@ -36,8 +43,16 @@ def plot_data_only():
         sizing_mode='stretch_both',
         tools='pan,wheel_zoom,box_zoom,reset,crosshair',
         active_drag='pan',
-        active_scroll='wheel_zoom'
+        active_scroll='wheel_zoom',
+        x_axis_label='x',
+        y_axis_label='y'
     )
+    
+    plot.xaxis.axis_label_text_font_size = "32pt"
+    plot.yaxis.axis_label_text_font_size = "32pt"
+    plot.xaxis.major_label_text_font_size = "24pt"
+    plot.yaxis.major_label_text_font_size = "24pt"
+    
     plot.scatter(x='x', y='y', source=data, size=marker_size)
     span = Span(location=1.0, dimension='height', line_dash="dashed")
     plot.add_layout(span)
@@ -76,9 +91,14 @@ def plot_model():
         active_drag='pan',
         active_scroll='wheel_zoom'
     )
+    plot.xaxis.axis_label_text_font_size = "32pt"
+    plot.yaxis.axis_label_text_font_size = "32pt"
+    plot.xaxis.major_label_text_font_size = "24pt"
+    plot.yaxis.major_label_text_font_size = "24pt"
+    
     plot.scatter(x='x', y='y', source=data, size=marker_size)
     plot.line(x='x', y='y', source=model, line_width=line_width, line_alpha=0.6, line_color="#D81B60")
-    plot.scatter(x='px', y='py', source=point, size=marker_size)
+    plot.scatter(x='px', y='py', source=point, size=marker_size, fill_color="#D81B60")
 
     span = Span(location=1.0, dimension='height', line_dash="dashed")
     plot.add_layout(span)
@@ -105,7 +125,7 @@ def plot_model():
     w0.js_on_change('value', callback)
     w1.js_on_change('value', callback)
 
-    sliders = row(Spacer(width=50), w0, w1, height=50, sizing_mode='stretch_width')
+    sliders = row(Spacer(width=100), w0, w1, height=80, sizing_mode='stretch_width')
     grid = column([plot, sliders], sizing_mode='stretch_both')
 
     if DEBUG:
@@ -305,8 +325,8 @@ def plot_gradient():
 
 if __name__ == '__main__':
 
-    #plot_data_only()
-    #plot_model()
-    #plot_model_loss()
+    plot_data_only()
+    plot_model()
+    plot_model_loss()
     plot_gradient()
     

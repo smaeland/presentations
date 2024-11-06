@@ -1,39 +1,150 @@
 ---
-title: "Mattekveld MAT110"
-subtitle: "KI stuff"
-author: "Steffen Mæland (IDER)"
 format:
   revealjs:
-    # theme: [default, custom.scss]
+    theme: [default, custom.scss]
     auto-stretch: false
     auto-play-media: true
-  
+    slide-number: true
 ---
 
-## Kul forside {.center}
+## {data-menu-title="Forside" background-image="figures/MAT110-flyer.png" background-position="top" background-size="cover"}
 
-## ChatGPT demo
+## {data-menu-title="GPT-UiO" background-iframe="https://www.uio.no/tjenester/it/ki/gpt-uio/"}
 
-## GPT-2 {background-iframe="https://openai.com/index/gpt-2-1-5b-release/"}
+## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/"}
 
-## Terminal window
+<!-- Terminal -->
 
-## An easier prediction problem
+## {data-menu-title="Et enklere prediksjonsproblem"}
 
-Just list data points -> graph would be better
-(but introduce x, y)
+::::{.columns style="font-size: 0.8em;"}
 
-## An easier prediction problem
+:::{.column width="25%"}
+:::
 
-Data points
+:::{.column width="30%"}
+| **_x_** | **_y_** |
+|:---:|:---:|
+| 0.619 | 5.127 |
+| 0.351 | 4.294 |
+| 0.687 | 6.107 |
+| 0.558 | 5.023 |
+| 0.075 | 3.894 |
+| 0.780 | 5.350 |
+| 0.609 | 5.537 |
+| 0.629 | 5.477 |
+| 0.102 | 4.453 |
+| 0.360 | 4.979 |
+| 0.297 | 5.878 |
+:::
 
-## An easier prediction problem
+:::{.column width="30%"}
+| **_x_** | **_y_** |
+|:---:|:---:|
+| 0.741 | 5.239 |
+| 0.515 | 4.723 |
+| 0.658 | 4.828 |
+| 0.355 | 5.079 |
+| 0.182 | 5.041 |
+| 0.444 | 4.819 |
+| 0.051 | 3.598 |
+| 0.662 | 4.830 |
+| 0.505 | 5.401 |
+| [1.000]{style="color: #D81B60"} | [?]{style="color: #D81B60"} | 
+:::
 
-Data points with predictive model
+::::
 
-## Define loss function
+
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_data_only.html" background-interactive="true"}
+
+<!-- :::{style="padding-left: 20%;"} -->
+<!-- <iframe width="1600px" height="800px" src="figures/linreg_data_only.html"></iframe> -->
+<!-- ::: -->
+
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_sliders.html" background-interactive="true"}
+
+## {.center data-menu-title="Lineær modell"}
+
+Vår modell: 
+
+$$
+%\small
+\begin{align}
+\hat{\color{DarkBlue}{y}} &= \color{Purple}{f}(\color{DarkOrange}{\mathbf{x}}, \boldsymbol{\color{teal}{\theta}}) \\[1em]
+ &= \color{teal}{\theta}_0
+ + \color{teal}{\theta}_1 \color{DarkOrange}{x}
+\end{align}
+$$
+
+:::{.fragment}
+Eller på _**vektorform**:_
+
+$$
+%\small
+\begin{align}
+\hat{\color{DarkBlue}{y}} &= 
+\boldsymbol{\color{teal}{\theta}}^{\intercal} \cdot \color{DarkOrange}{x} \\
+&= 
+  \begin{bmatrix}
+    \color{teal}{\theta}_0 & \color{teal}{\theta}_1
+  \end{bmatrix}
+  \begin{bmatrix}
+    \color{DarkOrange}{x}_0 \\ \color{DarkOrange}{x}_1
+  \end{bmatrix} \\
+&= \color{teal}{\theta}_0 \color{DarkOrange}{x}_0 + \color{teal}{\theta}_1 \color{DarkOrange}{x}_1 \qquad \color{grey}{(\mathrm{med}\; x_0=1}) \\[0.5em]
+&= \color{teal}{\theta}_0 + \color{teal}{\theta}_1 \color{DarkOrange}{x}_1
+\end{align}
+$$
+:::
+
+
+
+## {data-menu-title="Tapsfunksjon"}
+
+::::{.columns}
+:::{.column width="80%"}
+
+:::{.r-stack}
 
 ![](figures/lossfunction/image-1.png)
+
+![](figures/lossfunction/image-2.png){.fragment fragment-index=1}
+
+![](figures/lossfunction/image-3.png){.fragment fragment-index=2}
+
+![](figures/lossfunction/image-4.png){.fragment fragment-index=3}
+
+![](figures/lossfunction/image-5.png){.fragment fragment-index=4}
+
+![](figures/lossfunction/image-6.png){.fragment fragment-index=5}
+
+![](figures/lossfunction/image-7.png){.fragment fragment-index=6}
+
+![](figures/lossfunction/image-8.png){.fragment fragment-index=7}
+
+:::
+
+:::
+
+:::{.column width="20%"}
+
+:::{.fragment fragment-index=7 .fade-in-then-out}
+$$
+\small
+L = (y - \hat{y})^2
+$$
+:::
+
+:::{.fragment fragment-index=8}
+$$
+\small
+L = \frac{1}{N} \sum_i^N (y_i - \hat{y}_i)^2
+$$
+:::
+:::
+
+::::
 
 
 ## An easier prediction model
@@ -96,40 +207,6 @@ vector of functions
 
 ## Gradient descent 
 
-## Transition
-
-can model the future, how about words
-
-## No words on a computer 
-
-```
-Matematikk er kult :)
-```
-
-```
-01001101 01100001 01110100 01100101 01101101 01100001
-01110100 01101001 01101011 01101011 00100000 01100101
-01110010 00100000 01101011 01110101 01101100 01110100
-00100000 00111010 00101001
-```
-
-## Tokenization
-
-> Mathematics is cool because it
-
-```
-Mat          ->   19044
-hemat        ->   10024
-ics          ->     873
- is          ->     318
- cool        ->    3608
- because     ->     780
- it          ->     340
-```
-
-> 19044 10024 873 318 3608 780 340
-
-## Data {background-iframe="https://commoncrawl.org/"}
 
 ## NN
 
@@ -193,12 +270,61 @@ $$
 
 ## {background-iframe="https://en.wikipedia.org/wiki/Automatic_differentiation"}
 
+## Transition
+
+can model the future, how about words
+
+## Data {background-iframe="https://commoncrawl.org/"}
+
+
+## No words on a computer 
+
+```
+Matematikk er kult :)
+```
+
+```
+01001101 01100001 01110100 01100101 01101101 01100001
+01110100 01101001 01101011 01101011 00100000 01100101
+01110010 00100000 01101011 01110101 01101100 01110100
+00100000 00111010 00101001
+```
+
+## Tokenization
+
+> Mathematics is cool because it
+
+```
+Mat          ->   19044
+hemat        ->   10024
+ics          ->     873
+ is          ->     318
+ cool        ->    3608
+ because     ->     780
+ it          ->     340
+```
+
+```
+  Mat  hemat  ics   is  cool  because   it
+19044  10024  873  318  3608      780  340
+```
+
+## {data-menu-title="Vokabular"}
+
+{{< include vocab.qmd >}}
+
+
+## {.center data-menu-title="The humble vector"}
+
+![](figures/simplevec.png){width="50%" fig-align="center"}
+
+
 
 ## Vektorer i 1D
 
 ::::{.columns}
 :::{.column width="50%"}
-![](figures/vector-1d.png)
+  ![](figures/vector-1d.png)
 :::
 
 :::{.column width="50%"}
@@ -219,6 +345,10 @@ $$
 $$
 ||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2}
 $$
+
+:::{.absolute bottom="0%" right="0%" width="150px"}
+![](figures/brain1.jpg){fig-align="right"}
+:::
 
 ## Vektorer i 2D
 
@@ -248,8 +378,11 @@ $$
 ||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2}
 $$
 
+:::{.absolute bottom="0%" right="0%" width="150px"}
+![](figures/brain2.jpg){fig-align="right"}
+:::
 
-## Vektorer i 2D
+## Vektorer i 3D
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -277,11 +410,15 @@ $$
 ||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + (a_3-b_3)^2}
 $$
 
+:::{.absolute bottom="0%" right="0%" width="150px"}
+![](figures/brain3.jpg){fig-align="right"}
+:::
+
+
 ## Vektorer i ND
 
-
 ::::{.columns}
-:::{.column width="50%"}
+:::{.column width="30%"}
 ![](figures/vector-nd.png)
 :::
 
@@ -306,6 +443,82 @@ $$
 ||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + \dots +  (a_N-b_N)^2}
 $$
 
+:::{.absolute bottom="0%" right="0%" width="150px"}
+![](figures/brain4.jpg){fig-align="right"}
+:::
+
+
+## {.center data-menu-title="GPT embedding-dimensjoner"}
+
+En moderne språkmodell plasserer ord i et [3072]{style="color: #E91E63"}-dimensjonalt vektorrom
+
+I vårt eksempel (_GPT-2_) har vi et [768]{style="color: #FF5722"}-dimensjonalt rom.
+
+## Demo
+
+## {data-menu-title="word2vec"}
+
+:::{.r-stack}
+
+![](figures/word2vec/word2vec-1.png){width="70%"}
+
+:::{.fragment fragment-index=1}
+![](figures/word2vec/word2vec-2.png){width="70%"}
+:::
+
+:::{.fragment fragment-index=2}
+![](figures/word2vec/word2vec-3.png){width="70%"}
+:::
+
+:::{.fragment fragment-index=3}
+![](figures/word2vec/word2vec-4.png){width="70%"}
+:::
+
+:::
+
+:::{.fragment fragment-index=3 .absolute top="0px" right="0px" width="350px"}
+![](figures/roma.webp)
+:::
+
+
+
+## Demo
+
+## {.center data-menu-title="Attention"}
+
+<!-- Hvonrdan reaterer vi ting? -->
+
+Math is fun! I like it. What do I like?
+
+<!-- 37372 318 1257 0 314 588 340 13, 1867 466 314 588 30 -->
+
+## {.center}
+
+:::{style="font-size: 0.5em;"}
+| | | | | | | | | | | | | | | 
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+| | **math** | **is** | **fun** | **!** | **I** | **like** | **it** | **.** | **What** | **do** | **I** | **like** | **?** |
+| **math** | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **is** | 0.9357 | 0.0643 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **fun** | 0.7342 | 0.1296 | 0.1362 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **!** | 0.4835 | 0.1179 | 0.2959 | 0.1026 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **I** | 0.4432 | 0.1021 | 0.1672 | 0.1356 | 0.1519 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **like** | 0.2441 | 0.1537 | 0.1081 | 0.1142 | 0.2886 | 0.0913 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **it** | 0.2979 | 0.0914 | 0.1043 | 0.1174 | 0.1961 | 0.1213 | 0.0716 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **.** | 0.3669 | 0.0437 | 0.1165 | 0.0980 | 0.1606 | 0.0950 | 0.1059 | 0.0135 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **What** | 0.2511 | 0.0683 | 0.0633 | 0.0673 | 0.1283 | 0.0808 | 0.0839 | 0.0260 | 0.2310 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **do** | 0.2306 | 0.0418 | 0.0663 | 0.0451 | 0.1580 | 0.0780 | 0.0495 | 0.0178 | 0.2829 |0.0301 | 0.0000 | 0.0000 | 0.0000 | 
+| **I** | 0.2039 | 0.0373 | 0.0810 | 0.0562 | 0.0692 | 0.0753 | 0.0563 | 0.0172 | 0.2758 |0.0483 | 0.0794 | 0.0000 | 0.0000 |
+| **like** | 0.1179 | 0.0637 | 0.0511 | 0.0490 | 0.1354 | 0.0393 | 0.0579 | 0.0262 | 0.1517 |0.0812 | 0.1790 | 0.0476 | 0.0000 |
+| **?** | 0.2196 | 0.0172 | 0.0695 | 0.0325 | 0.0525 | 0.0376 | 0.0268 | 0.0091 | 0.3793 |0.0179 | 0.0646 | 0.0487 | 0.0247 |
+:::
+
+
+## {data-menu-title="Sammenheng mellom ord"}
+
+:::{style="padding-left: 20%;"}
+<iframe width="800px" height="800px" src="attention_plot.html"></iframe>
+:::
 
 ## Flow
 
