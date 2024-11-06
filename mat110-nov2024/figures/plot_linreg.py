@@ -89,7 +89,9 @@ def plot_model():
         min_width=400,
         tools='pan,wheel_zoom,box_zoom,reset,crosshair',
         active_drag='pan',
-        active_scroll='wheel_zoom'
+        active_scroll='wheel_zoom',
+        x_axis_label='x',
+        y_axis_label='y'
     )
     plot.xaxis.axis_label_text_font_size = "32pt"
     plot.yaxis.axis_label_text_font_size = "32pt"
@@ -156,8 +158,16 @@ def plot_model_loss():
         min_width=400,
         tools='pan,wheel_zoom,box_zoom,reset,crosshair',
         active_drag='pan',
-        active_scroll='wheel_zoom'
+        active_scroll='wheel_zoom',
+        x_axis_label='x',
+        y_axis_label='y'
     )
+
+    plot.xaxis.axis_label_text_font_size = "32pt"
+    plot.yaxis.axis_label_text_font_size = "32pt"
+    plot.xaxis.major_label_text_font_size = "24pt"
+    plot.yaxis.major_label_text_font_size = "24pt"
+
     plot.scatter(x='x', y='y', source=data, size=marker_size)
     plot.line(x='x', y='y', source=model, line_width=line_width, line_alpha=0.6, line_color="#D81B60")
 
@@ -241,14 +251,14 @@ def plot_gradient():
         y_range=(-10, 10),
         sizing_mode='stretch_both',
         min_width=400,
-        x_axis_label=r'$$\theta_1$$',
-        y_axis_label=r'$$\theta_2$$'
+        x_axis_label=r'$$\theta_0$$',
+        y_axis_label=r'$$\theta_1$$'
     )
     plot2.xaxis.axis_label_text_font_size = "32pt"
     plot2.yaxis.axis_label_text_font_size = "32pt"
 
-    label1 = Label(x=6, y=-5, text=r'$$\frac{\partial L}{\partial\theta_1} = $$', text_font_size='36px')
-    label2 = Label(x=6, y=-8, text=r'$$\frac{\partial L}{\partial\theta_2} = $$', text_font_size='36px')
+    label1 = Label(x=6, y=-5, text=r'$$-\frac{\partial L}{\partial\theta_0} = $$', text_font_size='36px')
+    label2 = Label(x=6, y=-8, text=r'$$-\frac{\partial L}{\partial\theta_1} = $$', text_font_size='36px')
     plot2.add_layout(label1)
     plot2.add_layout(label2)
 
@@ -302,8 +312,8 @@ def plot_gradient():
         console.log("grad_theta1 =", grad_theta1.toFixed(3), "grad_theta2 =", grad_theta2.toFixed(3))
 
         label.text = "$$L = $$ " + mse.toFixed(3).toString()
-        label1.text = "$$\\\\frac{\\\\partial L}{\\\\partial\\\\theta_2} = $$ " + grad_theta1.toFixed(3).toString()
-        label2.text = "$$\\\\frac{\\\\partial L}{\\\\partial\\\\theta_2} = $$ " + grad_theta2.toFixed(3).toString()
+        label1.text = "$$-\\\\frac{\\\\partial L}{\\\\partial\\\\theta_0} = $$ " + grad_theta1.toFixed(3).toString()
+        label2.text = "$$-\\\\frac{\\\\partial L}{\\\\partial\\\\theta_1} = $$ " + grad_theta2.toFixed(3).toString()
         """
     )
 

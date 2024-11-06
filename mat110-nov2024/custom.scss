@@ -5,3 +5,16 @@
 .reveal code {
   max-height: 100% !important;
 }
+// Code blocks
+.sourceCode {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+/* Adds a bottom border to the table header row for distinction */
+.reveal table thead th,
+.reveal .slides table tr:last-child td,
+.reveal .slides table {
+  border-bottom: 2px solid #000; /* Dark grey color for the bottom border */
+}
+
