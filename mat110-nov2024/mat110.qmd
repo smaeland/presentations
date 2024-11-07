@@ -6,6 +6,8 @@ format:
     auto-play-media: true
     slide-number: true
     code-line-numbers: false
+    progress: false
+    preload-iframes: true
 revealjs-plugins:
   - pointer
 format-links: [html]
@@ -13,16 +15,17 @@ format-links: [html]
 
 ## {data-menu-title="Forside" background-image="figures/MAT110-flyer.png" background-position="top" background-size="cover"}
 
-## {data-menu-title="ChatGPT" .center background-color="#E1F5FE"}
+## {data-menu-title="ChatGPT" .center background-color="#E0E0E0"}
 
-:::{style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);"}
+:::{style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
 ![](figures/chatgpt.png){fig-align="center"}
 :::
 
-## {data-menu-title="GPT-UiO" background-iframe="https://www.uio.no/tjenester/it/ki/gpt-uio/"}
+## {data-menu-title="GPT-UiO" background-iframe="https://www.uio.no/tjenester/it/ki/gpt-uio/" background-interactive="true"}
 
-## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/"}
+## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/" background-interactive="true"}
 
+## {data-menu-title="Demo GPT-2" background-color="#E0E0E0"}
 <!-- Terminal -->
 
 ## {data-menu-title="Et enklere prediksjonsproblem"}
@@ -93,7 +96,7 @@ $$
 %\small
 \begin{align}
 \hat{\color{DarkBlue}{y}} &= 
-\boldsymbol{\color{teal}{\theta}}^{\intercal} \cdot \color{DarkOrange}{x} \\
+\boldsymbol{\color{teal}{\theta}}^{\intercal} \cdot \boldsymbol{\color{DarkOrange}{x}} \\
 &= 
   \begin{bmatrix}
     \color{teal}{\theta}_0 & \color{teal}{\theta}_1
@@ -113,6 +116,9 @@ $$
 
 
 ## {data-menu-title="Tapsfunksjon"}
+
+:::{style="padding-top: 50px;"}
+:::
 
 ::::{.columns}
 :::{.column width="80%"}
@@ -139,22 +145,22 @@ $$
 
 :::
 
-:::{.column width="20%"}
+<!-- :::{.column width="20%"} -->
 
-:::{.fragment fragment-index=7 .fade-in-then-out}
+:::{.absolute top="10%" left="75%" .fragment fragment-index=7 .fade-in-then-out}
 $$
 \small
 L = (y - \hat{y})^2
 $$
 :::
 
-:::{.fragment fragment-index=8}
+:::{.absolute top="20%" left="75%" .fragment fragment-index=8}
 $$
 \small
 L = \frac{1}{N} \sum_i^N (y_i - \hat{y}_i)^2
 $$
 :::
-:::
+<!-- ::: -->
 
 ::::
 
@@ -179,7 +185,12 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}x}
 $$
 
-![](figures/2d_plot_example.png){fig-align="center" width="80%"}
+:::{style="padding-top: 50px;"}
+:::
+
+:::{.fragment}
+![](figures/2d_plot_example.png){fig-align="center" width="70%"}
+:::
 :::
 
 :::{.column width="50%"}
@@ -213,7 +224,50 @@ $$
 \end{bmatrix}
 $$
 
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&=
+\end{align}
+$$
+:::
+
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y}) \frac{\partial}{\partial \color{teal}{\theta_0}} 
+\color{teal}{\theta_0}
+\end{align}
+$$
+:::
+
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y}) \frac{\partial}{\partial \color{teal}{\theta_0}} 
+\color{teal}{\theta_0} \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})
+\end{align}
+$$
+:::
+
+
 ## {data-menu-title="Linreg med gradient" background-iframe="figures/linreg_gradient.html" background-interactive="true"}
+
+## {data-menu-title="Høydekurver" background-image="figures/kart.png"}
+
 
 <!-- ## Gradient descent --> 
 
