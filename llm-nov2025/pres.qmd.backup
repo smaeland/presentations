@@ -1,0 +1,1447 @@
+---
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    auto-stretch: false
+    auto-play-media: true
+    slide-number: true
+    code-line-numbers: false
+    progress: false
+    preload-iframes: true
+<<<<<<< HEAD
+=======
+highlight-style: atom-one
+>>>>>>> dbb75b0 (Add LLM part)
+revealjs-plugins:
+  - pointer
+format-links: [html]
+---
+
+## {data-menu-title="Forside" background-image="figures/MAT110-flyer.png" background-position="top" background-size="cover"}
+
+<<<<<<< HEAD
+## {data-menu-title="ChatGPT" .center background-color="#E0E0E0"}
+=======
+
+## {data-menu-title="ChatGPT" .center background-color="#E0E0E0"}
+<!-- The prime LLM example --> 
+>>>>>>> dbb75b0 (Add LLM part)
+
+:::{style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
+![](figures/chatgpt.png){fig-align="center"}
+:::
+
+<<<<<<< HEAD
+<!-- ## {data-menu-title="GPT-UiO" background-iframe="https://www.uio.no/tjenester/it/ki/gpt-uio/" background-interactive="true"} -->
+
+## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/" background-interactive="true"}
+=======
+
+## {data-menu-title="AI trends" .center}
+<!-- Most of the recent models are LLMs -->
+
+![](figures/epoch-ml-trends.svg)
+
+
+
+## {data-menu-title="Stanford AI index" .center }
+<!-- AI performance as of 2025 -->
+
+![](figures/fig_2.1.33.png){fig-align="center" width="800px"}
+
+:::{.absolute bottom="0%" left="5%" style="font-size: 0.5em;"}
+[Stanford AI index](https://hai.stanford.edu/ai-index/2025-ai-index-report)
+:::
+
+
+## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/" background-interactive="true"}
+<!-- Let's rewind time! -->
+
+>>>>>>> dbb75b0 (Add LLM part)
+
+## {data-menu-title="Demo GPT-2" background-color="#E0E0E0"}
+<!-- Terminal -->
+
+<<<<<<< HEAD
+## {data-menu-title="Et enklere prediksjonsproblem"}
+
+::::{.columns style="font-size: 0.8em;"}
+
+:::{.column width="25%"}
+:::
+
+:::{.column width="30%"}
+| **_x_** | **_y_** |
+|:---:|:---:|
+| 0.619 | 5.127 |
+| 0.351 | 4.294 |
+| 0.687 | 6.107 |
+| 0.558 | 5.023 |
+| 0.075 | 3.894 |
+| 0.780 | 5.350 |
+| 0.609 | 5.537 |
+| 0.629 | 5.477 |
+| 0.102 | 4.453 |
+| 0.360 | 4.979 |
+| 0.297 | 5.878 |
+:::
+
+:::{.column width="30%"}
+| **_x_** | **_y_** |
+|:---:|:---:|
+| 0.741 | 5.239 |
+| 0.515 | 4.723 |
+| 0.658 | 4.828 |
+| 0.355 | 5.079 |
+| 0.182 | 5.041 |
+| 0.444 | 4.819 |
+| 0.051 | 3.598 |
+| 0.662 | 4.830 |
+| 0.505 | 5.401 |
+| [1.000]{style="color: #D81B60"} | [?]{style="color: #D81B60"} | 
+:::
+
+::::
+
+
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_data_only.html" background-interactive="true"}
+
+<!-- :::{style="padding-left: 20%;"} -->
+<!-- <iframe width="1600px" height="800px" src="figures/linreg_data_only.html"></iframe> -->
+<!-- ::: -->
+
+## {.center data-menu-title="Lineær modell"}
+
+Vår modell: 
+
+$$
+%\small
+\begin{align}
+\hat{\color{DarkBlue}{y}} &= \color{Purple}{f}(\color{DarkOrange}{x}, \boldsymbol{\color{teal}{\theta}}) \\[1em]
+ &= \color{teal}{\theta}_0
+ + \color{teal}{\theta}_1 \color{DarkOrange}{x}
+\end{align}
+$$
+
+:::{.fragment}
+Eller på _**vektorform**:_
+
+:::{style="padding-left: 35%;"}
+$$
+%\small
+\begin{align}
+\hat{\color{DarkBlue}{y}} &= 
+\boldsymbol{\color{teal}{\theta}}^{\intercal} \cdot \boldsymbol{\color{DarkOrange}{x}} \\
+&= 
+  \begin{bmatrix}
+    \color{teal}{\theta}_0 & \color{teal}{\theta}_1
+  \end{bmatrix}
+  \begin{bmatrix}
+    \color{DarkOrange}{x}_0 \\ \color{DarkOrange}{x}_1
+  \end{bmatrix} \\
+&= \color{teal}{\theta}_0 \color{DarkOrange}{x}_0 + \color{teal}{\theta}_1 \color{DarkOrange}{x}_1 \qquad \color{grey}{(\mathrm{med}\; x_0=1}) \\[0.5em]
+&= \color{teal}{\theta}_0 + \color{teal}{\theta}_1 \color{DarkOrange}{x}_1
+\end{align}
+$$
+:::
+:::
+
+
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_sliders.html" background-interactive="true"}
+
+
+## {data-menu-title="Tapsfunksjon"}
+
+:::{style="padding-top: 50px;"}
+:::
+
+::::{.columns}
+:::{.column width="80%"}
+
+:::{.r-stack}
+
+![](figures/lossfunction/image-1.png)
+
+![](figures/lossfunction/image-2.png){.fragment fragment-index=1}
+
+![](figures/lossfunction/image-3.png){.fragment fragment-index=2}
+
+![](figures/lossfunction/image-4.png){.fragment fragment-index=3}
+
+![](figures/lossfunction/image-5.png){.fragment fragment-index=4}
+
+![](figures/lossfunction/image-6.png){.fragment fragment-index=5}
+
+![](figures/lossfunction/image-7.png){.fragment fragment-index=6}
+
+![](figures/lossfunction/image-8.png){.fragment fragment-index=7}
+
+:::
+
+:::
+
+<!-- :::{.column width="20%"} -->
+
+:::{.absolute top="10%" left="75%" .fragment fragment-index=7 .fade-in-then-out}
+$$
+\small
+L = (y - \hat{y})^2
+$$
+:::
+
+:::{.absolute top="20%" left="75%" .fragment fragment-index=8}
+$$
+\small
+L = \frac{1}{N} \sum_i^N (y_i - \hat{y}_i)^2
+$$
+:::
+<!-- ::: -->
+
+::::
+
+
+## {data-menu-title="Linreg med tapsfunksjon" background-iframe="figures/linreg_loss.html" background-interactive="true"}
+
+## {.center data-menu-title="Tapsfunksjon"}
+
+$$
+L =  (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2
+$$
+
+
+
+## {data-menu-title="På fjellet" background-image="figures/mountain.jpg"}
+
+## {.center data-menu-title="Partiellderiverte"}
+
+::::{.columns}
+:::{.column width="50%"}
+$$
+\frac{\mathrm{d}}{\mathrm{d}x}
+$$
+
+:::{style="padding-top: 50px;"}
+:::
+
+:::{.fragment}
+![](figures/2d_plot_example.png){fig-align="center" width="70%"}
+:::
+:::
+
+:::{.column width="50%"}
+:::{.fragment}
+$$
+\frac{\partial}{\partial x} , \quad \frac{\partial}{\partial y}
+$$
+
+![](figures/3d_plot_example.png){fig-align="center"}
+=======
+
+
+## {data-menu-title="Attention is all you need" background-image="figures/attention-arxiv.png" background-size="contain"}
+<!-- Introduce the innovative tech -->
+
+:::{.absolute top="0%" left="40%" width="450px"}
+![](figures/attention.png){style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
+:::
+
+
+## _Step 1:_ Text to numbers
+
+
+::::{.columns}
+:::{.column width="50%"}
+
+:::{style="padding-top: 60px;"}
+:::
+
+Computers know only [numbers]{.purple}
+
+Text contains... [text]{.purple}
+
+Need to make text into numbers (_aka_ **tokens**).
+
+:::{style="padding-top: 60px;"}
+:::
+
+:::{.fragment fragment-index=1}
+Different language models often use different tokenisation algorithms
+:::
+
+
+:::
+:::{.column width="50%"}
+:::{.fragment fragment-index=1}
+![Tokeniser [playground](https://huggingface.co/spaces/Xenova/the-tokenizer-playground)](figures/tokenizers.png)
+>>>>>>> dbb75b0 (Add LLM part)
+:::
+:::
+::::
+
+<<<<<<< HEAD
+## {.center data-menu-title="Gradient"}
+
+$$
+\nabla L = 
+\begin{bmatrix}
+\frac{\partial \color{Purple}{f}}{\partial \color{teal}{x}} \\[0.2em]
+\frac{\partial \color{Purple}{f}}{\partial \color{teal}{y}}
+\end{bmatrix}
+$$
+
+## {.center data-menu-title="Gradient"}
+
+$$
+- \nabla L = 
+\begin{bmatrix}
+- \frac{\partial \color{Purple}{f}}{\partial \color{teal}{x}} \\[0.2em]
+- \frac{\partial \color{Purple}{f}}{\partial \color{teal}{y}}
+\end{bmatrix}
+$$
+
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&=
+\end{align}
+$$
+:::
+
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y}) \frac{\partial}{\partial \color{teal}{\theta_0}} 
+\color{teal}{\theta_0}
+\end{align}
+$$
+:::
+
+## {data-menu-title="Gradient 1"}
+
+:::{.absolute top="10%" left="25%"}
+$$
+\begin{align}
+\frac{\partial L}{\partial \color{teal}{\theta_0}}
+&=  \frac{\partial}{\partial \color{teal}{\theta_0}} (\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})^2 \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y}) \frac{\partial}{\partial \color{teal}{\theta_0}} 
+\color{teal}{\theta_0} \\
+&= 2(\color{teal}{\theta}_0+ \color{teal}{\theta}_1 \color{DarkOrange}{x} - \color{DarkBlue}{y})
+\end{align}
+$$
+:::
+
+
+## {data-menu-title="Linreg med gradient" background-iframe="figures/linreg_gradient.html" background-interactive="true"}
+
+## {data-menu-title="Høydekurver" background-image="figures/kart.png"}
+
+
+<!-- ## Gradient descent --> 
+
+
+## {.center data-menu-title="Nevralnett"}
+
+![](figures/neuralnet.png){width="70%" fig-align="center"}
+
+## {.center data-menu-title="Nevralnett aktivering"}
+
+![](figures/neuralnet_activations.png){fig-align="center"}
+
+
+## {data-menu-title="GPT parameterantall" background-image="figures/gpt-parameters.png"}
+
+:::{.fragment .absolute left="15%" bottom="-50px" width="700px"}
+![](figures/datacentre.jpg){fig-align="center"}
+:::
+
+## {.center data-menu-title="Nevralnett forts."}
+
+La oss skrive et nevralnett som en funksjon sammensatt av hvert lag $k$, der $k = 1, 2, \dots, K$: 
+
+:::{style="padding-top: 40px;"}
+:::
+
+$$
+\hat{y} = 
+\color{Purple}{f}_K(
+\color{Purple}{f}_{K-1}(
+\color{Purple}{f}_{K-2}(
+\dots (
+\color{Purple}{f}_1(\boldsymbol{\color{DarkOrange}{x}}, \boldsymbol{\color{teal}{\theta}}_1) \dots ))))
+$$
+
+:::{style="padding-top: 50px;"}
+:::
+
+Hvordan finne parameterene $\boldsymbol{\color{teal}{\theta}}$ som gir minst mulig feil $L$?
+
+## {data-menu-title="Kjerneregelen" .center background-color="#EDE7F6"}
+
+:::{style="padding-left: 25%; font-size: 2em; font-weight: 400;"}
+Kjerneregelen
+:::
+
+## {.center data-menu-title="Kjerneregelen for nevralnett"}
+
+:::{.absolute top="-20px" right="-20px" width="200px"}
+![](figures/neuralnet.png)
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+$$
+\small
+\frac{\partial L}{\partial\boldsymbol{\color{teal}{\theta}}_{K-1}} 
+= \frac{\partial L}{\partial\color{Purple}{f}_{K}}
+\frac{\partial \color{Purple}{f}_K}{\partial\boldsymbol{\color{teal}{\theta}}_{K-1}}
+$$
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+$$
+\small
+\frac{\partial L}{\partial\boldsymbol{\color{teal}{\theta}}_{K-2}} 
+= \frac{\partial L}{\partial \color{Purple}{f}_{K}}
+\frac{\partial \color{Purple}{f}_K}{\partial\color{Purple}{f}_{K-1}}
+\frac{\partial \color{Purple}{f}_{K-1}}{\partial\boldsymbol{\color{teal}{\theta}}_{K-2}}
+$$
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+$$
+\small
+\frac{\partial L}{\partial\boldsymbol{\color{teal}{\theta}}_{K-3}} 
+= \frac{\partial L}{\partial\color{Purple}{f}_{K}}
+\frac{\partial \color{Purple}{f}_K}{\partial\color{Purple}{f}_{K-1}}
+\frac{\partial \color{Purple}{f}_{K-1}}{\partial\color{Purple}{f}_{K-2}}
+\frac{\partial \color{Purple}{f}_{K-2}}{\partial\boldsymbol{\color{teal}{\theta}}_{K-3}}
+$$
+:::
+
+:::{.fragment}
+$$
+\small
+\frac{\partial L}{\partial\boldsymbol{\color{teal}{\theta}}_{i}} 
+= \frac{\partial L}{\partial\color{Purple}{f}_{K}}
+\frac{\partial \color{Purple}{f}_{K}}{\partial\color{Purple}{f}_{K-1}}
+\frac{\partial \color{Purple}{f}_{K-1}}{\partial\color{Purple}{f}_{K-2}}
+\dots
+\frac{\partial \color{Purple}{f}_{i+2}}{\partial\color{Purple}{f}_{i+1}}
+\frac{\partial \color{Purple}{f}_{i+1}}{\partial\boldsymbol{\color{teal}{\theta}}_{i}}
+$$
+:::
+
+
+## {data-menu-title="Autodiff" background-iframe="https://en.wikipedia.org/wiki/Automatic_differentiation" background-interactive="true"}
+
+## Språkmodeller {.center background-color="#F1F8E9"}
+
+
+<!-- ## Data {background-iframe="https://commoncrawl.org/"} -->
+
+
+## {.center data-menu-title="Ingen ord på en datamaskin"} 
+
+
+:::{style="font-size: 0.8em;"}
+
+Det finnes ingen ord i en datamaskin, kun representasjoner.
+
+:::{.fragment}
+Tekst:
+```{.c}
+Matematikk er kult :)
+```
+:::
+
+:::{.fragment}
+Binær:
+```{.c}
+01001101 01100001 01110100 01100101 01101101 01100001 01110100
+01101001 01101011 01101011 00100000 01100101 01110010 00100000
+01101011 01110101 01101100 01110100 00100000 00111010 00101001
+```
+:::
+
+:::{.fragment}
+Desimal (base 10):
+```{.c}
+77 97 116 101 109 97 116 105 107 107 32 101 114 32 107 117 108
+116 32 58 41
+```
+:::
+
+:::
+
+## {data-menu-title="Tokenization" .center}
+
+
+```{.c}
+  Mathematics is cool because it (...)
+
+  
+```
+
+## {data-menu-title="Tokenization" .center}
+
+```{.c}
+  Mat  hemat  ics   is  cool  because  it (...)
+   ↓     ↓     ↓    ↓     ↓      ↓      ↓ 
+19044  10024  873  318  3608    780    340
+```
+
+
+## {data-menu-title="Vokabular"}
+=======
+
+## {data-menu-title="Vocabulary"}
+>>>>>>> dbb75b0 (Add LLM part)
+
+{{< include vocab.qmd >}}
+
+
+<<<<<<< HEAD
+## {.center data-menu-title="The humble vector" background-color="#F9FBE7"}
+
+![](figures/simplevec.png){width="50%" fig-align="center"}
+
+
+
+## 1D
+
+::::{.columns}
+:::{.column width="50%"}
+
+:::{style="padding-top: 120px;"}
+:::
+
+![](figures/vector-1d.png)
+:::
+
+:::{.column width="50%"}
+
+:::{style="padding-top: 120px;"}
+:::
+
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1
+\end{bmatrix}
+$$
+
+:::
+::::
+
+:::{style="padding-top: 120px;"}
+:::
+
+:::{.fragment}
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2}
+$$
+:::
+
+:::{.absolute top="-40px" right="-80px" width="150px"}
+![](figures/brain1.jpg){fig-align="right"}
+:::
+
+## 2D
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-2d.png)
+:::
+
+:::{.column width="50%"}
+
+:::{style="padding-top: 120px;"}
+:::
+
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2}
+$$
+
+:::{.absolute top="-40px" right="-80px" width="150px"}
+![](figures/brain2.jpg){fig-align="right"}
+:::
+
+## 3D
+
+::::{.columns}
+:::{.column width="50%"}
+![](figures/vector-3d.png)
+:::
+
+:::{.column width="50%"}
+
+:::{style="padding-top: 120px;"}
+:::
+
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2 \\ a_3
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2 \\ b_3
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + (a_3-b_3)^2}
+$$
+
+:::{.absolute top="-40px" right="-80px" width="150px"}
+![](figures/brain3.jpg){fig-align="right"}
+:::
+
+
+## ND
+
+:::{style="padding-top: 60px;"}
+:::
+
+::::{.columns}
+:::{.column width="30%"}
+![](figures/vector-nd.png)
+:::
+
+:::{.column width="50%"}
+$$
+\small
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_1 \\ a_2 \\ \vdots \\ a_N 
+\end{bmatrix},
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_1 \\ b_2 \\ \vdots \\ b_N
+\end{bmatrix}
+$$
+
+:::
+::::
+
+$$
+\small
+||\boldsymbol{A}-\boldsymbol{B}|| = \sqrt{(a_1-b_1)^2 + (a_2-b_2)^2 + \dots +  (a_N-b_N)^2}
+$$
+
+:::{.absolute top="-40px" right="-80px" width="150px"}
+![](figures/brain4.jpg){fig-align="right"}
+:::
+
+
+## {.center data-menu-title="GPT embedding-dimensjoner"}
+
+En moderne språkmodell plasserer ord i et [3072]{style="color: #E91E63"}-dimensjonalt vektorrom
+
+:::{style="padding-top: 60px;"}
+:::
+
+I vårt eksempel (_GPT-2_) har vi et [768]{style="color: #FF5722"}-dimensjonalt rom.
+
+## {data-menu-title="Demo" background-color="#FFF8E1"}
+=======
+## _Step 2:_ Text to <s>numbers</s> _decimal_ numbers
+
+:::{style="padding-top: 20px;"}
+:::
+Let a one-layer neural network convert the indices to a [vector]{.purple}:
+
+::::{.columns}
+:::{.column width="50%"}
+:::{.absolute top="44%" left="2.5%" width="380px"}
+![](figures/embedding-layer.png)
+:::
+
+:::{.absolute top="24%" left="0%" style="text-align: center;"}
+`the`<br>
+<i class="bi bi-arrow-down"></i><br>
+`[ 0     1     0     0 ]`
+:::
+
+:::{.absolute bottom="4%" left="2%"}
+`[ -1.46 -0.86  0.09 ]`
+:::
+:::
+
+:::{.column width="50%"}
+:::{.fragment style="padding-top:160px;"}
+```{.python}
+my_embedding = {
+  'the': [-1.46, -0.86,  0.09],
+  'and': [-0.27,  1.15,  1.19],
+  'a':   [ 1.17,  0.06, -0.16],
+  'of':  [ 0.60,  0.10,  0.22],
+  ...
+}
+```
+:::
+:::
+::::
+
+
+## _Step 3:_ Give the numbers some meaning
+
+
+:::{style="padding-top: 70px;"}
+:::
+
+::::{.columns}
+:::{.column width="50%"}
+Our words are now _embedded_ in an $\small N$-dimensional vector space
+
+- Google Gemini: $\small N = 4096$
+- GPT-2 (our example): $\small N = 768$
+
+This means [_vector arithmetic_]{.pink} now applies
+:::
+
+:::{.column width="45%" style="text-align: right;"}
+![](figures/vectorspace-1.png)
+:::
+::::
+
+:::{.fragment}
+Training our language model yields a [spatial relationship]{.blue} between related words
+:::
+
+
+## {data-menu-title="Demo" background-color="#FFF8E1"}
+<!-- TensorBoard demo -->
+
+>>>>>>> dbb75b0 (Add LLM part)
+
+## {data-menu-title="word2vec"}
+
+:::{.r-stack}
+
+<<<<<<< HEAD
+![](figures/word2vec/word2vec-1.png){width="70%"}
+=======
+:::{.fragment fragment-index=0}
+![](figures/word2vec/word2vec-1.png){width="70%"}
+:::
+>>>>>>> dbb75b0 (Add LLM part)
+
+:::{.fragment fragment-index=1}
+![](figures/word2vec/word2vec-2.png){width="70%"}
+:::
+
+:::{.fragment fragment-index=2}
+![](figures/word2vec/word2vec-3.png){width="70%"}
+:::
+
+:::{.fragment fragment-index=3}
+![](figures/word2vec/word2vec-4.png){width="70%"}
+:::
+
+:::
+
+:::{.fragment fragment-index=3 .absolute top="0px" right="0px" width="350px"}
+![](figures/roma.webp)
+:::
+
+
+<<<<<<< HEAD
+## {background-image="figures/attention_is_all_you_need.png" background-position="top" background_size="cover"}
+
+:::{.absolute bottom="0px" right="10%" width="30%" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid;"}
+![](figures/attention_block.png){fig-align="center"}
+:::
+
+## {.center data-menu-title="Attention"}
+
+<!-- Hvonrdan reaterer vi ting? -->
+
+Math is fun! I like it. What do I like?
+
+<!-- 37372 318 1257 0 314 588 340 13, 1867 466 314 588 30 -->
+
+## {.center data-menu-title="Attention matrix"}
+
+:::{style="font-size: 0.5em;"}
+| | **math** | **is** | **fun** | **!** | **I** | **like** | **it** | **.** | **What** | **do** | **I** | **like** | **?** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
+| **math** | 1.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **is** | 0.9357 | 0.0643 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **fun** | 0.7342 | 0.1296 | 0.1362 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **!** | 0.4835 | 0.1179 | 0.2959 | 0.1026 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **I** | 0.4432 | 0.1021 | 0.1672 | 0.1356 | 0.1519 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **like** | 0.2441 | 0.1537 | 0.1081 | 0.1142 | 0.2886 | 0.0913 | 0.0000 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **it** | 0.2979 | 0.0914 | 0.1043 | 0.1174 | 0.1961 | 0.1213 | 0.0716 | 0.0000 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **.** | 0.3669 | 0.0437 | 0.1165 | 0.0980 | 0.1606 | 0.0950 | 0.1059 | 0.0135 | 0.0000 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **What** | 0.2511 | 0.0683 | 0.0633 | 0.0673 | 0.1283 | 0.0808 | 0.0839 | 0.0260 | 0.2310 |0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| **do** | 0.2306 | 0.0418 | 0.0663 | 0.0451 | 0.1580 | 0.0780 | 0.0495 | 0.0178 | 0.2829 |0.0301 | 0.0000 | 0.0000 | 0.0000 | 
+| **I** | 0.2039 | 0.0373 | 0.0810 | 0.0562 | 0.0692 | 0.0753 | 0.0563 | 0.0172 | 0.2758 |0.0483 | 0.0794 | 0.0000 | 0.0000 |
+| **like** | 0.1179 | 0.0637 | 0.0511 | 0.0490 | 0.1354 | 0.0393 | 0.0579 | 0.0262 | 0.1517 |0.0812 | 0.1790 | 0.0476 | 0.0000 |
+| **?** | 0.2196 | 0.0172 | 0.0695 | 0.0325 | 0.0525 | 0.0376 | 0.0268 | 0.0091 | 0.3793 |0.0179 | 0.0646 | 0.0487 | 0.0247 |
+:::
+
+
+## {data-menu-title="Sammenheng mellom ord"}
+=======
+
+## {data-menu-title="Other uses of embeddings"}
+<!-- Vector embeddings are not new, but used other places too -->
+
+![](figures/google-vector-search.png){width="650px" fig-align="center"}
+
+
+:::{layout-ncol=2}
+![](https://storage.googleapis.com/gweb-cloudblog-publish/images/Matching_Engine_blog_visuals_1.max-2000x2000.png)
+
+![](https://storage.googleapis.com/gweb-cloudblog-publish/images/Matching_Engine_blog_visuals_3.max-2000x2000.png)
+:::
+
+
+:::{.absolute bottom="0%" right="0%" style="font-size: 0.5em;"}
+[cloud.google.com/blog](https://cloud.google.com/blog/topics/developers-practitioners/find-anything-blazingly-fast-googles-vector-search-technology)
+:::
+
+
+
+
+## {data-menu-title="(Self-)Attention is all you need" background-image="figures/attention-arxiv.png" background-size="contain"}
+
+:::{.absolute top="0%" left="40%" width="450px"}
+![](figures/attention.png){style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
+:::
+
+
+
+## Self-attention
+
+:::{style="padding-top: 30px;"}
+:::
+What service does a "station" provide?
+
+:::{style="padding-top: 30px;"}
+:::
+
+- [He stopped at the **station** to fill petrol.]{.purple}
+- [The meteorological **station** is unmanned.]{.deep-purple}
+- [The train left the **station** on time.]{.blue}
+- [I prefer BBC Radio 4 over other **station**s.]{.teal}
+
+Of course dependent on context
+
+
+
+## Self-attention
+
+Example sentence: _"The train left the station on time"_
+
+![](figures/attention-chollet.png){fig-align="center" width="900px"}
+
+:::{.absolute top="400%" right="0%" style="font-size: 0.7em;"}
+<i class="bi bi-arrow-clockwise"></i>Repeat<br>for all tokens
+:::
+
+
+## Self-attention
+
+::::{.columns}
+:::{.column width="74%"}
+In (slow) code, we can write it as
+
+:::{style="padding-top: 10px;"}
+:::
+
+```{.python code-line-numbers="true"}
+def self_attention(input_sequence):
+  output = tf.zeros(shape=input_sequence.shape)
+
+  for i, vector in enumerate(input_sequence):
+    scores = tf.zeros(shape=(len(input_sequence), ))
+
+    for j, other_vector in enumerate(input_sequence):
+      scores[j] = tf.tensordot(vector, other_vector, axis=1)
+
+    scores /= np.sqrt(input_sequence.shape[1])
+    scores = tf.nn.softmax(scores)
+
+    new_representation = tf.zeros(shape=vector.shape)
+    for j, other_vector in enumerate(input_sequence):
+      new_representation += other_vector * scores[j]
+
+    output[i] = new_representation
+
+  return output
+```
+:::
+
+:::{.column width="26%"}
+:::
+::::
+
+## Self-attention
+
+::::{.columns}
+:::{.column width="72%"}
+In (slow) code, we can write it as
+
+:::{style="padding-top: 10px;"}
+:::
+
+```{.python code-line-numbers="4-8"}
+def self_attention(input_sequence):
+  output = tf.zeros(shape=input_sequence.shape)
+
+  for i, vector in enumerate(input_sequence):
+    scores = tf.zeros(shape=(len(input_sequence), ))
+
+    for j, other_vector in enumerate(input_sequence):
+      scores[j] = tf.tensordot(vector, other_vector, axis=1)
+
+    scores /= np.sqrt(input_sequence.shape[1])
+    scores = tf.nn.softmax(scores)
+
+    new_representation = tf.zeros(shape=vector.shape)
+    for j, other_vector in enumerate(input_sequence):
+      new_representation += other_vector * scores[j]
+
+    output[i] = new_representation
+
+  return output
+```
+:::
+
+:::{.column width="28%"}
+:::{style="padding-top: 120px;"}
+:::
+
+Compute dot product with all other token vectors
+
+:::{.r-stack}
+
+![](figures/dotprod-1.png){.fragment .fade-in-then-out}
+
+![](figures/dotprod-2.png){.fragment .fade-in-then-out}
+
+![](figures/dotprod-3.png){.fragment .fade}
+
+:::
+:::
+::::
+
+## Self-attention
+
+::::{.columns}
+:::{.column width="74%"}
+In (slow) code, we can write it as
+
+:::{style="padding-top: 10px;"}
+:::
+
+```{.python code-line-numbers="10-11"}
+def self_attention(input_sequence):
+  output = tf.zeros(shape=input_sequence.shape)
+
+  for i, vector in enumerate(input_sequence):
+    scores = tf.zeros(shape=(len(input_sequence), ))
+
+    for j, other_vector in enumerate(input_sequence):
+      scores[j] = tf.tensordot(vector, other_vector, axis=1)
+
+    scores /= np.sqrt(input_sequence.shape[1])
+    scores = tf.nn.softmax(scores)
+
+    new_representation = tf.zeros(shape=vector.shape)
+    for j, other_vector in enumerate(input_sequence):
+      new_representation += other_vector * scores[j]
+
+    output[i] = new_representation
+
+  return output
+```
+:::
+
+:::{.column width="26%"}
+:::{style="padding-top: 200px;"}
+Scale by input length and apply softmax
+
+Softmax ensures all attention scores are in the interval \[0, 1\].
+:::
+:::
+::::
+
+## Self-attention
+
+::::{.columns}
+:::{.column width="74%"}
+In (slow) code, we can write it as
+
+:::{style="padding-top: 10px;"}
+:::
+
+```{.python code-line-numbers="13-15"}
+def self_attention(input_sequence):
+  output = tf.zeros(shape=input_sequence.shape)
+
+  for i, vector in enumerate(input_sequence):
+    scores = tf.zeros(shape=(len(input_sequence), ))
+
+    for j, other_vector in enumerate(input_sequence):
+      scores[j] = tf.tensordot(vector, other_vector, axis=1)
+
+    scores /= np.sqrt(input_sequence.shape[1])
+    scores = tf.nn.softmax(scores)
+
+    new_representation = tf.zeros(shape=vector.shape)
+    for j, other_vector in enumerate(input_sequence):
+      new_representation += other_vector * scores[j]
+
+    output[i] = new_representation
+
+  return output
+```
+:::
+
+:::{.column width="26%"}
+:::{style="padding-top: 320px;"}
+Multiply each token vector by the score, and sum all of them
+:::
+:::
+::::
+
+## Self-attention
+
+::::{.columns}
+:::{.column width="74%"}
+In (slow) code, we can write it as
+
+:::{style="padding-top: 10px;"}
+:::
+
+```{.python code-line-numbers="true"}
+def self_attention(input_sequence):
+  output = tf.zeros(shape=input_sequence.shape)
+ 
+  for i, vector in enumerate(input_sequence):
+    scores = tf.zeros(shape=(len(input_sequence), ))
+
+    for j, other_vector in enumerate(input_sequence):
+      scores[j] = tf.tensordot(vector, other_vector, axis=1)
+
+    scores /= np.sqrt(input_sequence.shape[1])
+    scores = tf.nn.softmax(scores)
+
+    new_representation = tf.zeros(shape=vector.shape)
+    for j, other_vector in enumerate(input_sequence):
+      new_representation += other_vector * scores[j]
+
+    output[i] = new_representation
+
+  return output
+```
+:::
+
+:::{.column width="26%"}
+:::{style="padding-top: 400px;"}
+Return the new vector representation
+:::
+:::
+::::
+
+
+## The _query-key-value_ model
+
+:::{style="padding-top: 10px;"}
+:::
+
+We can generalise the attention mechanism by using concepts from information retrieval.
+
+What we computed was basically
+
+::::{.columns}
+:::{.column width=15%}
+:::
+:::{.column width=70%}
+:::{style="padding-top: 20px;"}
+:::
+```{.python}
+output = sum(inputs * pairwise_scores(inputs, inputs))
+```
+:::
+::::
+
+:::{.fragment}
+but we could be doing this with three different sequences:
+
+::::{.columns}
+:::{.column width=15%}
+:::
+:::{.column width=70%}
+:::{style="padding-top: 20px;"}
+:::
+```{.python}
+output = sum(values * pairwise_scores(query, keys))
+```
+:::
+::::
+
+> For each element in a query, compute how much it is related to every key, and use these scores to weight a sum of values
+
+:::
+
+
+
+## <s>Self</s> attention
+
+::::{.columns}
+:::{.column width="70%"}
+Now we want to increase the complexity by computing attention several times in parallel.
+
+[_But:_]{.color-red-dark} Our transformation so far has no learnable parameters
+
+ <i class="bi bi-arrow-right"></i> it's just a stateless operation, we get the same result each time.
+
+:::{.fragment}
+Key idea from the [_"Attention is all you need"_]{.color-deep-purple} paper:
+
+- Pass each input (query, key and value) though a separate neural network layer
+  - Each with their own parameters
+
+<i class="bi bi-arrow-right"></i> This is where the model **learns the different meanings** of the words in a sentence.
+:::
+::::
+:::
+
+:::{.absolute top="-5%" left="82%" width="1800px"}
+![](figures/attention-arxiv.png)
+:::
+
+
+## {data-menu-title="Attention visualisation"}
+>>>>>>> dbb75b0 (Add LLM part)
+
+:::{style="padding-left: 20%;"}
+<iframe width="800px" height="800px" src="figures/attention_plot.html"></iframe>
+:::
+
+<<<<<<< HEAD
+## {data-menu-title="Fin" background-color="#E1F5FE"}
+
+
+:::{style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);"}
+![](figures/chatgpt.png){fig-align="center"}
+:::
+
+
+:::{.absolute top="50%" left="30%" width="150px" height="200px" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); transform: rotate(-15deg);"}
+![](figures/thomas_calculus.webp){fig-align="center"}
+:::
+
+:::{.absolute top="50%" left="55%" width="150px" height="200px" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); transform: rotate(15deg);"}
+![](figures/edwards.webp){fig-align="center"}
+:::
+
+
+:::{.absolute top="55%" left="47%" style="font-size: 1.3em;"}
+💕
+:::
+
+
+<!-- ## {data-menu-title="Blank" background-color="#FAFAFA"} -->
+
+<!-- Hidden iframes, just to make sure quarto-render includes the files -->
+
+<!-- ## Flow -->
+
+<!-- - gpt demo -->
+<!-- - word-for-word. how to compute the next one -->
+<!-- - show script for next word probabilities -->
+<!-- - transition: how to compute next value. start with an easier problem. -->
+<!-- - linear regression (with a colored dot/line) -->
+  <!-- - vector / matrix notation -->
+<!-- - derivatives --> 
+  <!-- - mountain + fog -->
+  <!-- - partial derivatives -->
+<!-- - fitness landscape v/ arrows -->
+<!-- - neural networks -->
+  <!-- - chain rule -->
+  <!-- - for big models? -> autodiff -->
+<!-- - transition: okay so we can model the future. how to do this for words? -->
+<!-- - no words on a computer (maybe show binary). tokenisation -->
+<!-- - words have meaning - how to implement this. word2vec -->
+<!-- - vectors and vector spaces -->
+
+
+<!-- ## MAT110 -->
+
+<!-- - Parametertilpasning polynom -->
+  <!-- - Derivasjon -->
+  <!-- - Fitness landscape -->
+
+<!-- - Vektorrom --> 
+  <!-- - word2vec --> 
+=======
+## Vector embeddings
+
+Tokenise and embed the words:
+
+:::{.absolute top="50%" left="10%"}
+"you are **right**"
+:::
+
+:::{.absolute top="30%" left="45%" width="500px"}
+![](figures/vectorspace-1.png)
+:::
+
+
+## _Transformers_
+
+:::{.absolute top="30%" left="0%"}
+"you are **right**"
+:::
+
+:::{.absolute top="80%" left="0%"}
+"turn **right** here"
+:::
+
+:::{.absolute top="15%" left="25%" width="360px"}
+![](figures/vectorspace-1.png)
+:::
+
+:::{.absolute top="15%" right="-5%" width="360px" .fragment fragment-index=1}
+![](figures/vectorspace-2.png)
+:::
+
+:::{.absolute bottom="0%" left="25%" width="360px"}
+![](figures/vectorspace-3.png)
+:::
+
+:::{.absolute bottom="0%" right="-5%" width="360px" .fragment fragment-index=1}
+![](figures/vectorspace-4.png)
+:::
+
+:::{.absolute top="30%" left="60%" style="text-align: center; font-size:0.8em;" .fragment fragment-index=1}
+transform!<br>
+<i class="bi bi-arrow-right"></i>
+:::
+
+:::{.absolute top="70%" left="60%" style="text-align: center; font-size: 0.8em;" .fragment fragment-index=1}
+transform!<br>
+<i class="bi bi-arrow-right"></i>
+:::
+
+
+:::{.absolute bottom="-5%" left="35%" style="font-size: 0.6em;"}
+Embedding space
+:::
+
+:::{.absolute bottom="-5%" left="80%" style="font-size: 0.6em;" .fragment fragment-index=1}
+New representation
+:::
+
+
+## {data-menu-title="Attention is (still) all you need" background-image="figures/attention-arxiv.png" background-size="contain"}
+
+:::{.absolute top="0%" left="40%" width="450px"}
+![](figures/attention.png){style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
+:::
+
+
+
+## Training LLMs 
+
+Modern [_(decoder-type)_]{.color-text-muted} language models are [next word predictors]{.pink}.
+
+::::{.columns}
+:::{.column width="60%"}
+
+:::{.fragment fragment-index=1}
+So we train them to do exactly this:
+
+- Mask the end of sentences
+- Use the next token as the prediction target 
+- Reveal token and move to next one
+- Continue until end of text
+:::
+:::
+
+:::{.column width="40%"}
+![](figures/mask-matrix.png){fig-align="right" .fragment fragment-index=1 style="padding-top: 40px;"}
+:::
+::::
+
+
+## Generating text from a decoder model
+
+Modern [_(decoder-type)_]{.color-text-muted} language models are [next word predictors]{.pink}.
+
+Output is a vector of softmax scores for all possible tokens.
+
+:::{style="padding-top: 20px;"}
+:::
+
+![](figures/textgen.png){fig-aling="center" width="90%"}
+
+[_Deep Learning with Python_, F. Chollet]{.absolute bottom="0%" left="0%" style="font-size: 0.5em;"}
+
+
+
+## Generating text from a decoder model
+
+- Process sequence and predict next token
+- Append predicted token to the sequence 
+- Process extended sequence and again append predicted token
+- Repeat 
+
+:::{.absolute top="50%" left="10%"}
+The cat sat on the _____
+:::
+:::{.absolute top="50%" left="52%" width="300px"}
+`floor       7.72%`<br>
+`bed         6.82%`<br>
+`couch       5.70%`<br>
+`ground      4.71%`<br>
+`edge        4.66%`<br>
+:::
+
+
+## Generating text from a decoder model
+
+- Process sequence and predict next token
+- Append predicted token to the sequence 
+- Process extended sequence and again append predicted token
+- Repeat 
+
+:::{.absolute top="50%" left="10%"}
+The cat sat on the [floor]{.color-pink-dark} _____
+:::
+:::{.absolute top="50%" left="52%" width="300px"}
+`,           25.08%`<br>
+`and         13.56%`<br>
+`.            7.38%`<br>
+`of           7.07%`<br>
+`with         6.58%`<br>
+:::
+
+
+## Generating text from a decoder model
+
+- Process sequence and predict next token
+- Append predicted token to the sequence 
+- Process extended sequence and again append predicted token
+- Repeat 
+
+:::{.absolute top="50%" left="10%"}
+The cat sat on the [floor, ]{.color-pink-dark} _____
+:::
+:::{.absolute top="50%" left="52%" width="300px"}
+`and         9.41%`<br>
+`looking     3.23%`<br>
+`the         1.78%`<br>
+`he          1.63%`<br>
+`his         1.48%`<br>
+:::
+
+## Generating text from a decoder model
+
+- Process sequence and predict next token
+- Append predicted token to the sequence 
+- Process extended sequence and again append predicted token
+- Repeat 
+
+:::{.absolute top="50%" left="10%"}
+The cat sat on the [floor, and]{.color-pink-dark} _____
+:::
+:::{.absolute top="50%" left="52%" width="300px"}
+`the         8.40%`<br>
+`he          5.72%`<br>
+`I           4.55%`<br>
+`she         3.65%`<br>
+`his         3.56%`<br>
+:::
+
+
+
+## Generating text from a decoder model
+
+[But:]{.red}
+
+Always selecting the single most probable word, often results in an unnatural, potentially meaningless sentence.
+
+![](figures/beamsearch.png)
+
+:::{.fragment}
+Need a _sampling strategy_
+:::
+
+
+## Generating text from a decoder model
+
+Simple is often best:
+
+Treat the output scores as probabilities, and [sample randomly]{.pink}.
+
+
+:::{style="padding-top: 40px;"}
+:::
+
+::::{.columns}
+:::{.column width="40%"}
+:::{.fragment fragment-index=1}
+[Tweak:]{.blue}
+
+Add a parameter to tune the probabilities (called _temperature_)
+:::
+:::
+
+:::{.column width="60%"}
+:::{.fragment fragment-index=1}
+<iframe width="100%" height="300px" src="figures/softmax_temperature.html"></iframe>
+:::
+:::
+::::
+
+
+## Today's question {background-color="#E1F5FE"}
+
+:::{style="padding-top: 40px;"}
+:::
+
+Using what you have learned from the course, can you make a **_better sampling strategy_**?
+
+
+
+>>>>>>> dbb75b0 (Add LLM part)
