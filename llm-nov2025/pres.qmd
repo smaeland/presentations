@@ -107,7 +107,7 @@ Let a one-layer neural network convert the indices to a [vector]{.purple}:
 
 ::::{.columns}
 :::{.column width="50%"}
-:::{.absolute top="44%" left="2.5%" width="380px"}
+:::{.absolute top="44%" left="2%" width="380px"}
 ![](figures/embedding-layer.png)
 :::
 
@@ -117,7 +117,7 @@ Let a one-layer neural network convert the indices to a [vector]{.purple}:
 `[ 0     1     0     0 ]`
 :::
 
-:::{.absolute bottom="4%" left="2%"}
+:::{.absolute bottom="4%" left="3%"}
 `[ -1.46 -0.86  0.09 ]`
 :::
 :::
@@ -172,20 +172,20 @@ Training our language model yields a [spatial relationship]{.blue} between relat
 
 :::{.r-stack}
 
-:::{.fragment fragment-index=0}
-![](figures/word2vec/word2vec-1.png){width="70%"}
-:::
+<!-- :::{.fragment fragment-index=0} -->
+![](figures/word2vec_1.png){width="70%"}
+<!-- ::: -->
 
 :::{.fragment fragment-index=1}
-![](figures/word2vec/word2vec-2.png){width="70%"}
+![](figures/word2vec_2.png){width="70%"}
 :::
 
 :::{.fragment fragment-index=2}
-![](figures/word2vec/word2vec-3.png){width="70%"}
+![](figures/word2vec_3.png){width="70%"}
 :::
 
 :::{.fragment fragment-index=3}
-![](figures/word2vec/word2vec-4.png){width="70%"}
+![](figures//word2vec_4.png){width="70%"}
 :::
 
 :::
@@ -216,7 +216,7 @@ Training our language model yields a [spatial relationship]{.blue} between relat
 
 
 
-## {data-menu-title="(Self-)Attention is all you need" background-image="figures/attention-arxiv.png" background-size="contain"}
+## {data-menu-title="(Self-)Attention is all you need" background-image="figures/attention-arxiv.png" background-size="contain" background-color="#ECEFF1"}
 
 :::{.absolute top="0%" left="40%" width="450px"}
 ![](figures/attention.png){style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
@@ -224,7 +224,7 @@ Training our language model yields a [spatial relationship]{.blue} between relat
 
 
 
-## Self-attention
+## Step 4: _Self-attention_
 
 :::{style="padding-top: 30px;"}
 :::
@@ -495,7 +495,9 @@ output = sum(values * pairwise_scores(query, keys))
 :::
 ::::
 
-> For each element in a query, compute how much it is related to every key, and use these scores to weight a sum of values
+:::{style="padding-top: 50px;"}
+:::
+For each element in a [query]{.blue}, compute how much it is related to every [key]{.orange}, and use these scores to weight a sum of [values]{.pink}
 
 :::
 
@@ -505,17 +507,16 @@ output = sum(values * pairwise_scores(query, keys))
 
 ::::{.columns}
 :::{.column width="70%"}
-Now we want to increase the complexity by computing attention several times in parallel.
-
-[_But:_]{.color-red-dark} Our transformation so far has no learnable parameters
+So far our transformation has **no learnable parameters**
 
  <i class="bi bi-arrow-right"></i> it's just a stateless operation, we get the same result each time.
 
 :::{.fragment}
-Key idea from the [_"Attention is all you need"_]{.color-deep-purple} paper:
+Key idea from the:
 
-- Pass each input (query, key and value) though a separate neural network layer
-  - Each with their own parameters
+- Pass each input ([query]{.blue}, [key]{.orange} and [value]{.pink}) though a separate neural network layer
+
+    (Each with their own parameters)
 
 <i class="bi bi-arrow-right"></i> This is where the model **learns the different meanings** of the words in a sentence.
 :::
@@ -546,7 +547,7 @@ Tokenise and embed the words:
 :::
 
 
-## _Transformers_
+## Step 5: _Transformers_
 
 :::{.absolute top="30%" left="0%"}
 "you are **right**"
@@ -592,7 +593,7 @@ New representation
 :::
 
 
-## {data-menu-title="Attention is (still) all you need" background-image="figures/attention-arxiv.png" background-size="contain"}
+## {data-menu-title="Attention is (still) all you need" background-image="figures/attention-arxiv.png" background-size="contain" background-color="#ECEFF1"}
 
 :::{.absolute top="0%" left="40%" width="450px"}
 ![](figures/attention.png){style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid #9E9E9E;"}
@@ -602,15 +603,19 @@ New representation
 
 ## Training LLMs 
 
+:::{style="padding-top: 40px;"}
+:::
 Modern [_(decoder-type)_]{.color-text-muted} language models are [next word predictors]{.pink}.
 
+:::{style="padding-top: 40px;"}
+:::
 ::::{.columns}
 :::{.column width="60%"}
 
 :::{.fragment fragment-index=1}
 So we train them to do exactly this:
 
-- Mask the end of sentences
+- Hide the end of sentences
 - Use the next token as the prediction target 
 - Reveal token and move to next one
 - Continue until end of text
@@ -629,10 +634,10 @@ Modern [_(decoder-type)_]{.color-text-muted} language models are [next word pred
 
 Output is a vector of softmax scores for all possible tokens.
 
-:::{style="padding-top: 20px;"}
+:::{style="padding-top: 40px;"}
 :::
 
-![](figures/textgen.png){fig-aling="center" width="90%"}
+![](figures/textgen.png){fig-align="center" width="80%"}
 
 [_Deep Learning with Python_, F. Chollet]{.absolute bottom="0%" left="0%" style="font-size: 0.5em;"}
 
@@ -720,10 +725,12 @@ The cat sat on the [floor, and]{.color-pink-dark} _____
 
 Always selecting the single most probable word, often results in an unnatural, potentially meaningless sentence.
 
-![](figures/beamsearch.png)
+:::{style="padding-top: 40px;"}
+:::
+![](figures/beamsearch.png){fig-align="center" width="60%"}
 
 :::{.fragment}
-Need a _sampling strategy_
+Need a [_sampling strategy_]{.teal}.
 :::
 
 

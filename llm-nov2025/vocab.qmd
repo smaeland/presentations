@@ -1,5 +1,5 @@
 
-:::::{style="font-size: 0.55em; display: flex;" }
+:::::{style="font-size: 0.65em; display: flex;" }
 
 ::::{.columns}
 :::{.column width="10%"}
@@ -604,7 +604,7 @@ ography​
 
 
 
-
+<!--
 :::{.column width="10%"}
 ```
 list​
@@ -659,10 +659,7 @@ USA​
 finding​
 ```
 :::
-
-
-
-
+-->
 
 ::::
 :::::
