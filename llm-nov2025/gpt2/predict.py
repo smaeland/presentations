@@ -12,7 +12,7 @@ if __name__ == '__main__':
     while True:
 
         text = text.strip()
-        print(f'dbg text: "{text}"')
+        #print(f'dbg text: "{text}"')
 
         encoded_text = t(text, return_tensors="pt")
 
@@ -51,7 +51,7 @@ if __name__ == '__main__':
             break
 
         # Don't insert space if punctuation
-        if not re.fullmatch(r'[,;.!?:"\'-]', word):
+        if not re.fullmatch(r'[,;.!?:\-]', word):
             text += ' '
         
         text += word
