@@ -13,7 +13,7 @@ revealjs-plugins:
 format-links: [html]
 ---
 
-## {data-menu-title="Forside" background-image="../mat110-nov2024/figures/MAT110-flyer.png" background-position="top" background-size="cover"}
+## {data-menu-title="Forside" background-image="figures/MAT110-flyer.png" background-position="top" background-size="cover"}
 
 ## {data-menu-title="ChatGPT" .center background-color="#E0E0E0"}
 
@@ -21,7 +21,6 @@ format-links: [html]
 ![](figures/chatgpt.png){fig-align="center"}
 :::
 
-## {data-menu-title="GPT-UiO" background-iframe="https://www.uio.no/tjenester/it/ki/gpt-uio/" background-interactive="true"}
 
 ## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/" background-interactive="true"}
 
@@ -69,7 +68,7 @@ format-links: [html]
 ::::
 
 
-## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="../mat110-nov2024/figures/linreg_data_only.html" background-interactive="true"}
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_data_only.html" background-interactive="true"}
 
 <!-- :::{style="padding-left: 20%;"} -->
 <!-- <iframe width="1600px" height="800px" src="figures/linreg_data_only.html"></iframe> -->
@@ -112,7 +111,7 @@ $$
 :::
 
 
-## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="../mat110-nov2024/figures/linreg_sliders.html" background-interactive="true"}
+## {data-menu-title="Et enklere prediksjonsproblem" background-iframe="figures/linreg_sliders.html" background-interactive="true"}
 
 
 ## {data-menu-title="Tapsfunksjon"}
@@ -125,21 +124,21 @@ $$
 
 :::{.r-stack}
 
-![](../mat110-nov2024/figures/lossfunction/image-1.png)
+![](figures/lossfunction/image-1.png)
 
-![](../mat110-nov2024/figures/lossfunction/image-2.png){.fragment fragment-index=1}
+![](figures/lossfunction/image-2.png){.fragment fragment-index=1}
 
-![](../mat110-nov2024/figures/lossfunction/image-3.png){.fragment fragment-index=2}
+![](figures/lossfunction/image-3.png){.fragment fragment-index=2}
 
-![](../mat110-nov2024/figures/lossfunction/image-4.png){.fragment fragment-index=3}
+![](figures/lossfunction/image-4.png){.fragment fragment-index=3}
 
-![](../mat110-nov2024/figures/lossfunction/image-5.png){.fragment fragment-index=4}
+![](figures/lossfunction/image-5.png){.fragment fragment-index=4}
 
-![](../mat110-nov2024/figures/lossfunction/image-6.png){.fragment fragment-index=5}
+![](figures/lossfunction/image-6.png){.fragment fragment-index=5}
 
-![](../mat110-nov2024/figures/lossfunction/image-7.png){.fragment fragment-index=6}
+![](figures/lossfunction/image-7.png){.fragment fragment-index=6}
 
-![](../mat110-nov2024/figures/lossfunction/image-8.png){.fragment fragment-index=7}
+![](figures/lossfunction/image-8.png){.fragment fragment-index=7}
 
 :::
 
@@ -165,7 +164,7 @@ $$
 ::::
 
 
-## {data-menu-title="Linreg med tapsfunksjon" background-iframe="../mat110-nov2024/figures/linreg_loss.html" background-interactive="true"}
+## {data-menu-title="Linreg med tapsfunksjon" background-iframe="figures/linreg_loss.html" background-interactive="true"}
 
 ## {.center data-menu-title="Tapsfunksjon"}
 
@@ -175,7 +174,7 @@ $$
 
 
 
-## {data-menu-title="På fjellet" background-image="../mat110-nov2024/figures/mountain.jpg"}
+## {data-menu-title="På fjellet" background-image="figures/mountain.jpg"}
 
 ## {.center data-menu-title="Partiellderiverte"}
 
@@ -189,7 +188,7 @@ $$
 :::
 
 :::{.fragment}
-![](../mat110-nov2024/figures/2d_plot_example.png){fig-align="center" width="70%"}
+![](figures/2d_plot_example.png){fig-align="center" width="70%"}
 :::
 :::
 
@@ -199,7 +198,7 @@ $$
 \frac{\partial}{\partial x} , \quad \frac{\partial}{\partial y}
 $$
 
-![](../mat110-nov2024/figures/3d_plot_example.png){fig-align="center"}
+![](figures/3d_plot_example.png){fig-align="center"}
 :::
 :::
 ::::
@@ -264,9 +263,9 @@ $$
 :::
 
 
-## {data-menu-title="Linreg med gradient" background-iframe="../mat110-nov2024/figures/linreg_gradient.html" background-interactive="true"}
+## {data-menu-title="Linreg med gradient" background-iframe="figures/linreg_gradient.html" background-interactive="true"}
 
-## {data-menu-title="Høydekurver" background-image="../mat110-nov2024/figures/kart.png"}
+## {data-menu-title="Høydekurver" background-image="figures/kart.png"}
 
 
 <!-- ## Gradient descent --> 
@@ -274,17 +273,17 @@ $$
 
 ## {.center data-menu-title="Nevralnett"}
 
-![](../mat110-nov2024/figures/neuralnet.png){width="70%" fig-align="center"}
+![](figures/neuralnet.png){width="70%" fig-align="center"}
 
 ## {.center data-menu-title="Nevralnett aktivering"}
 
-![](../mat110-nov2024/figures/neuralnet_activations.png){fig-align="center"}
+![](figures/neuralnet_activations.png){fig-align="center"}
 
 
-## {data-menu-title="GPT parameterantall" background-image="../mat110-nov2024/figures/gpt-parameters.png"}
+## {data-menu-title="GPT parameterantall" background-image="figures/gpt-params.png"}
 
 :::{.fragment .absolute left="15%" bottom="-50px" width="700px"}
-![](../mat110-nov2024/figures/datacentre.jpg){fig-align="center"}
+![](figures/datacentre.jpg){fig-align="center"}
 :::
 
 ## {.center data-menu-title="Nevralnett forts."}
@@ -295,7 +294,7 @@ La oss skrive et nevralnett som en funksjon sammensatt av hvert lag $k$, der $k 
 :::
 
 $$
-\hat{y} = 
+\hat{\color{DarkBlue}{y}} = 
 \color{Purple}{f}_K(
 \color{Purple}{f}_{K-1}(
 \color{Purple}{f}_{K-2}(
@@ -317,7 +316,7 @@ Kjerneregelen
 ## {.center data-menu-title="Kjerneregelen for nevralnett"}
 
 :::{.absolute top="-20px" right="-20px" width="200px"}
-![](../mat110-nov2024/figures/neuralnet.png)
+![](figures/neuralnet.png)
 :::
 
 :::{.fragment .fade-in-then-semi-out}
@@ -371,7 +370,7 @@ $$
 
 <!-- ## Data {background-iframe="https://commoncrawl.org/"} -->
 
-
+<!--
 ## {.center data-menu-title="Ingen ord på en datamaskin"} 
 
 
@@ -421,6 +420,7 @@ Desimal (base 10):
    ↓     ↓     ↓    ↓     ↓      ↓      ↓ 
 19044  10024  873  318  3608    780    340
 ```
+-->
 
 
 ## {data-menu-title="Vokabular"}
@@ -430,7 +430,7 @@ Desimal (base 10):
 
 ## {.center data-menu-title="The humble vector" background-color="#F9FBE7"}
 
-![](../mat110-nov2024/figures/simplevec.png){width="50%" fig-align="center"}
+![](figures/simplevec.png){width="50%" fig-align="center"}
 
 
 
@@ -442,7 +442,7 @@ Desimal (base 10):
 :::{style="padding-top: 120px;"}
 :::
 
-![](../mat110-nov2024/figures/vector-1d.png)
+![](figures/vector-1d.png)
 :::
 
 :::{.column width="50%"}
@@ -476,14 +476,14 @@ $$
 :::
 
 :::{.absolute top="-40px" right="-80px" width="150px"}
-![](../mat110-nov2024/figures/brain1.jpg){fig-align="right"}
+![](figures/brain1.jpg){fig-align="right"}
 :::
 
 ## 2D
 
 ::::{.columns}
 :::{.column width="50%"}
-![](../mat110-nov2024/figures/vector-2d.png)
+![](figures/vector-2d.png)
 :::
 
 :::{.column width="50%"}
@@ -512,14 +512,14 @@ $$
 $$
 
 :::{.absolute top="-40px" right="-80px" width="150px"}
-![](../mat110-nov2024/figures/brain2.jpg){fig-align="right"}
+![](figures/brain2.jpg){fig-align="right"}
 :::
 
 ## 3D
 
 ::::{.columns}
 :::{.column width="50%"}
-![](../mat110-nov2024/figures/vector-3d.png)
+![](figures/vector-3d.png)
 :::
 
 :::{.column width="50%"}
@@ -548,7 +548,7 @@ $$
 $$
 
 :::{.absolute top="-40px" right="-80px" width="150px"}
-![](../mat110-nov2024/figures/brain3.jpg){fig-align="right"}
+![](figures/brain3.jpg){fig-align="right"}
 :::
 
 
@@ -559,7 +559,7 @@ $$
 
 ::::{.columns}
 :::{.column width="30%"}
-![](../mat110-nov2024/figures/vector-nd.png)
+![](figures/vector-nd.png)
 :::
 
 :::{.column width="50%"}
@@ -584,7 +584,7 @@ $$
 $$
 
 :::{.absolute top="-40px" right="-80px" width="150px"}
-![](../mat110-nov2024/figures/brain4.jpg){fig-align="right"}
+![](figures/brain4.jpg){fig-align="right"}
 :::
 
 
@@ -603,31 +603,31 @@ I vårt eksempel (_GPT-2_) har vi et [768]{style="color: #FF5722"}-dimensjonalt 
 
 :::{.r-stack}
 
-![](../mat110-nov2024/figures/word2vec/word2vec-1.png){width="70%"}
+![](figures/word2vec/word2vec-1.png){width="70%"}
 
 :::{.fragment fragment-index=1}
-![](../mat110-nov2024/figures/word2vec/word2vec-2.png){width="70%"}
+![](figures/word2vec/word2vec-2.png){width="70%"}
 :::
 
 :::{.fragment fragment-index=2}
-![](../mat110-nov2024/figures/word2vec/word2vec-3.png){width="70%"}
+![](figures/word2vec/word2vec-3.png){width="70%"}
 :::
 
 :::{.fragment fragment-index=3}
-![](../mat110-nov2024/figures/word2vec/word2vec-4.png){width="70%"}
+![](figures/word2vec/word2vec-4.png){width="70%"}
 :::
 
 :::
 
 :::{.fragment fragment-index=3 .absolute top="0px" right="0px" width="350px"}
-![](../mat110-nov2024/figures/roma.webp)
+![](figures/roma.webp)
 :::
 
 
-## {background-image="../mat110-nov2024/figures/attention_is_all_you_need.png" background-position="top" background_size="cover"}
+## {background-image="figures/attention_is_all_you_need.png" background-position="top" background_size="cover"}
 
 :::{.absolute bottom="0px" right="10%" width="30%" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); border: 1px solid;"}
-![](../mat110-nov2024/figures/attention_block.png){fig-align="center"}
+![](figures/attention_block.png){fig-align="center"}
 :::
 
 ## {.center data-menu-title="Attention"}
@@ -662,23 +662,23 @@ Math is fun! I like it. What do I like?
 ## {data-menu-title="Sammenheng mellom ord"}
 
 :::{style="padding-left: 20%;"}
-<iframe width="800px" height="800px" src="../mat110-nov2024/figures/attention_plot.html"></iframe>
+<iframe width="800px" height="800px" src="figures/attention_plot.html"></iframe>
 :::
 
 ## {data-menu-title="Fin" background-color="#E1F5FE"}
 
 
 :::{style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);"}
-![](../mat110-nov2024/figures/chatgpt.png){fig-align="center"}
+![](figures/chatgpt.png){fig-align="center"}
 :::
 
 
 :::{.absolute top="50%" left="30%" width="150px" height="200px" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); transform: rotate(-15deg);"}
-![](../mat110-nov2024/figures/thomas_calculus.webp){fig-align="center"}
+![](figures/thomas_calculus.webp){fig-align="center"}
 :::
 
 :::{.absolute top="50%" left="55%" width="150px" height="200px" style="background-color: #fff; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15); transform: rotate(15deg);"}
-![](../mat110-nov2024/figures/edwards.webp){fig-align="center"}
+![](figures/edwards.webp){fig-align="center"}
 :::
 
 
