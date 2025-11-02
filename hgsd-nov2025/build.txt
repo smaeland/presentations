@@ -1,0 +1,2 @@
+docker run -it --rm -v /Users/steffen/projects/presentations:/workdir -p 8888:8888 ghcr.io/quarto-dev/quarto:1.9.8
+quarto preview pres.qmd --port 8888 --host 0.0.0.0
