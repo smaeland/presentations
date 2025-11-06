@@ -24,7 +24,7 @@ format-links: [html]
 
 ## {data-menu-title="GPT-2" background-iframe="https://openai.com/index/gpt-2-1-5b-release/" background-interactive="true"}
 
-## {data-menu-title="Demo GPT-2" background-color="#E0E0E0"}
+## Demo {.center data-menu-title="Demo GPT-2" background-color="#E0E0E0"}
 <!-- Terminal -->
 
 ## {data-menu-title="Et enklere prediksjonsproblem"}
@@ -597,7 +597,7 @@ En moderne språkmodell plasserer ord i et [3072]{style="color: #E91E63"}-dimens
 
 I vårt eksempel (_GPT-2_) har vi et [768]{style="color: #FF5722"}-dimensjonalt rom.
 
-## {data-menu-title="Demo" background-color="#FFF8E1"}
+## Demo {.center data-menu-title="Demo" background-color="#FFF8E1"}
 
 ## {data-menu-title="word2vec"}
 
